@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/Nav.css";
 
+//Import components
+import Cart from "./Nav/CartIcon";
+
 //Importo imagenes
 import Menu from "./img/bars-solid.svg";
 import Close from "./img/times-solid.svg";
-import CartIcon from "./img/cart-plus-solid.svg";
 
 export default function Nav() {
   const [state, setState] = useState({ toggle: false });
-
-  //   console.log(state);
 
   function menuToggle() {
     setState({ toggle: !state.toggle });
@@ -25,7 +25,9 @@ export default function Nav() {
           <img src={Menu} width="25" alt="menu" />
         </div>
         <div className="logo">
-          <a className="logo-a">FleX</a>
+          <Link to="/" exact>
+            <a className="logo-a">FleX</a>
+          </Link>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
@@ -50,12 +52,9 @@ export default function Nav() {
               />
             </li>
           </ul>
-          <div className="nav-cart">
-            <span>0</span>
-            <Link to="/cart">
-              <img src={CartIcon} width="30" alt="carrito" />
-            </Link>
-          </div>
+          <Link to="/cartList">
+            <Cart cantidad="0" />
+          </Link>
         </nav>
       </header>
     </div>

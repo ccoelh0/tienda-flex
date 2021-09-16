@@ -33,6 +33,7 @@
   color: white;
   font-size: 18px;
   transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
 
 .footer .footer-ul li:hover {
@@ -50,6 +51,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .footer-logos-redes {
