@@ -25,12 +25,12 @@ export default function Nav() {
           <img src={Menu} width="25" alt="menu" />
         </div>
         <div className="logo">
-          <a>FleX</a>
+          <a className="logo-a">FleX</a>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/product">Productos</Link>

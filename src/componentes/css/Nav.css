@@ -11,17 +11,20 @@ header .logo a {
   text-decoration: none;
   /* text-transform: uppercase; */
   color: black;
-  font-family: "Bona Nova", serif;
+  font-family: "Vollkorn", serif !important;
   font-size: 35px;
 }
 
-header .logo a:hover {
-  color: #c12f14;
+header .logo .logo-a:hover {
+  color: #0443b2;
   cursor: pointer;
 }
 
 header nav {
   display: flex;
+}
+nav ul {
+  margin: 0;
 }
 nav ul li {
   list-style: none;
@@ -32,9 +35,10 @@ nav ul li a {
   /* text-transform: uppercase; */
   color: black;
   padding: 0 15px;
+  font-size: 17px;
 }
 nav ul li a:hover {
-  color: #c12f14;
+  color: #0443b2;
 }
 nav .nav-cart {
   cursor: pointer;
@@ -44,14 +48,14 @@ nav .nav-cart {
 }
 nav .nav-cart span {
   position: absolute;
-  top: -7px;
+  top: -15px;
   right: -15px;
-  background: #c12f14;
+  background: #0443b2;
   font-size: 15px;
   color: white;
   padding: 2px 7px;
   border-radius: 50%;
-  z-index: -1;
+  z-index: 1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
