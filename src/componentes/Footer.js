@@ -50,11 +50,11 @@ export default function Footer() {
 
             <div className="footer-logos col-4">
               <div className="footer-logos-redes">
-                <img src={Ig} width="40" />
-                <img src={Fb} width="40" />
-                <img src={Wp} width="40" />
+                <img src={Ig} width="30" />
+                <img src={Fb} width="30" />
+                <img src={Wp} width="30" />
               </div>
-              <h4>FleX</h4>
+              {/* <h4>FleX</h4> */}
             </div>
           </div>
         </div>
