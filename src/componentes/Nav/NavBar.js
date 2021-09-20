@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./css/Nav.css";
+import "../css/Nav.css";
 
 //Import components
-import Cart from "./Nav/CartIcon";
+import CartWidget from "./CartWidget";
 
 //Importo imagenes
-import Menu from "./img/bars-solid.svg";
-import Close from "./img/times-solid.svg";
+import Menu from "../img/bars-solid.svg";
+import Close from "../img/times-solid.svg";
 
 export default function Nav() {
   const [state, setState] = useState({ toggle: false });
@@ -52,8 +52,8 @@ export default function Nav() {
               />
             </li>
           </ul>
-          <Link to="/cartList">
-            <Cart cantidad="0" />
+          <Link to="/itemListContainer">
+            <CartWidget cantidad="0" />
           </Link>
         </nav>
       </header>

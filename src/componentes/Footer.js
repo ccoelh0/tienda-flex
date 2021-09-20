@@ -9,7 +9,7 @@ import Wp from "../componentes/img/logos/wp.png";
 export default function Footer() {
   return (
     <div className="footer-padre">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="d-none d-md-flex flex-row flex-nowrap">
             <div className="footer col-2">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <img src={Fb} width="30" />
                 <img src={Wp} width="30" />
               </div>
-              {/* <h4>FleX</h4> */}
+              <p>Todos los derechos reservados</p>
             </div>
           </div>
         </div>

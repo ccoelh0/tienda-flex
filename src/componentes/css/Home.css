@@ -49,7 +49,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0px 80px;
+  /* padding: 0px 80px; */
 }
 
 .productos-flex img {

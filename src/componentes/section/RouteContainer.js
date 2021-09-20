@@ -2,8 +2,8 @@ import React from "react";
 import { Route } from "react-router";
 
 //COMPONENTES
-import Home from "./section/Home";
-import CartList from "./section/CartList";
+import Home from "./Home";
+import ItemListContainer from "./ItemListContainer";
 
 export default function Section() {
   return (
@@ -12,7 +12,7 @@ export default function Section() {
       <Route path="/home" exact />
       <Route path="/product" exact />
       <Route path="/contact" exact />
-      <Route path="/cartList" component={CartList} exact />
+      <Route path="/itemListContainer" component={ItemListContainer} exact />
     </section>
   );
 }

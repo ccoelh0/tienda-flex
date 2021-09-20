@@ -22,7 +22,7 @@ export default function Home() {
         <h1>FleX - Tu tienda de Sneakers</h1>
         <div className="subrayado"></div>
       </div>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row productos-flex">
           <div className="home-flex col-sm-12 col-md-4">
             <img src={NikeLogo} width="120" alt="Logo extraido de FlatIcon" />
@@ -39,8 +39,7 @@ export default function Home() {
           <img src={Nike6} className="col-sm-12 col-md-4" />
         </div>
       </div>
-
-      <div className="container-fluid">
+      <div className="container">
         <div className="row productos-flex">
           <img src={Yeezy1} className="d-none d-md-flex col-md-4" />
           <img src={Yeezy2} className="d-none d-md-flex col-md-4" />
@@ -56,9 +55,11 @@ export default function Home() {
             </p>
             <button className="home-boton">Buy now</button>
           </div>
+          <img src={Yeezy1} className="col-12 d-md-none" />
+          <img src={Yeezy2} className="d-12 d-md-none" />
         </div>
       </div>
-      <div className="container-fluid">
+      <div className="container">
         <div className="titulo">
           <h4>ULTIMOS LANZAMIENTOS</h4>
           <div className="subrayado"></div>

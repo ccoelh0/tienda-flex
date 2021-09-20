@@ -1,11 +1,13 @@
 import React from "react";
 import CartIcon from "../img/cart-plus-solid.svg";
 
-export default function Cart(props) {
-  //Estilos pasados en el CSS de nav
+//Estilos pasados en el CSS de nav
+export default function CartWidget(props) {
+  //Desestructuracion
+  const { cantidad } = props;
   return (
     <div className="nav-cart">
-      <span>{props.cantidad}</span>
+      <span>{cantidad}</span>
       <img src={CartIcon} width="30" alt="carrito" />
     </div>
   );

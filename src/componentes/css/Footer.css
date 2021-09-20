@@ -19,24 +19,24 @@
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   text-align: left;
 }
 
-.footer .footer-ul {
+.footer-ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.footer .footer-ul li {
+.footer-ul li {
   color: white;
   font-size: 18px;
   transition: transform 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
 
-.footer .footer-ul li:hover {
+.footer-ul li:hover {
   transform: translateX(4px);
   color: white;
 }
@@ -50,19 +50,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: end;
   cursor: pointer;
+}
+
+.footer-logos p {
+  margin: 10px 0 0 0;
 }
 
 .footer-logos-redes {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-right: 10px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 10px;
 }
 
 .footer-logos-redes img {
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 .footer-logos h4 {
@@ -95,11 +100,8 @@
 }
 
 .footer-logos-celular {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  display: none;
+  /* margin-bottom: 40px; */
 }
 
 .footer-logos-celular-redes img {
@@ -119,4 +121,35 @@
 .footer-logos-celular h5 a {
   text-decoration: none;
   color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-padre {
+    background: rgb(4, 67, 178);
+    background: linear-gradient(
+      142deg,
+      rgba(4, 67, 178, 1) 0%,
+      rgba(28, 45, 115, 1) 77%,
+      rgba(20, 30, 48, 1) 100%
+    );
+    color: white;
+    padding: 40px 0px;
+    margin-top: 40px;
+  }
+
+  .footer-ul {
+    display: none;
+  }
+
+  .footer-logos-redes {
+    display: none;
+  }
+
+  .footer-logos-celular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 40px; */
+  }
 }
