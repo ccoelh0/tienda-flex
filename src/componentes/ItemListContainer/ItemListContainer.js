@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/Productos.css";
+import "../CssComponentes/Productos.css";
 
 //Componentes
 import { ItemCount } from "./ItemCount";
-import { PresentacionDelIndex } from "./PresentacionDelIndex";
+// import { PresentacionDelIndex } from "./PresentacionDelIndex";
 
 const ItemListContainer = () => {
   //PRODUCTOS PARA ITEM COUNT

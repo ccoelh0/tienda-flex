@@ -1,10 +1,10 @@
 import React from "react";
-import "./css/Footer.css";
+import "./CssComponentes/Footer.css";
 
 //Logos
-import Ig from "../componentes/img/logos/ig.png";
-import Fb from "../componentes/img/logos/fb.png";
-import Wp from "../componentes/img/logos/wp.png";
+import Ig from "../componentes/ImgComponentes/logos/ig.png";
+import Fb from "../componentes/ImgComponentes/logos/fb.png";
+import Wp from "../componentes/ImgComponentes/logos/wp.png";
 
 export default function Footer() {
   return (
@@ -50,9 +50,9 @@ export default function Footer() {
 
             <div className="footer-logos col-4">
               <div className="footer-logos-redes">
-                <img src={Ig} width="30" />
-                <img src={Fb} width="30" />
-                <img src={Wp} width="30" />
+                <img src={Ig} width="30" alt="redes" />
+                <img src={Fb} width="30" alt="redes" />
+                <img src={Wp} width="30" alt="redes" />
               </div>
               <p>Todos los derechos reservados</p>
             </div>
@@ -63,9 +63,9 @@ export default function Footer() {
         <div className="row">
           <div className="d-md-none footer-logos-celular col-12">
             <div className="footer-logos-celular-redes">
-              <img src={Ig} width="40" />
-              <img src={Fb} width="40" />
-              <img src={Wp} width="40" />
+              <img src={Ig} width="40" alt="redes" />
+              <img src={Fb} width="40" alt="redes" />
+              <img src={Wp} width="40" alt="redes" />
             </div>
             <h5>
               <a href="https://www.linkedin.com/in/agustin-coelho-2a5767175/">
