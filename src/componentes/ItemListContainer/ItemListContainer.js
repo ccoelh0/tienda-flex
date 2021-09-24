@@ -3,7 +3,7 @@ import "../css/Productos.css";
 
 //Componentes
 import { ItemCount } from "./ItemCount";
-// import { InformacionDeProductos } from "./InformacionDeProductos";
+import { PresentacionDelIndex } from "./PresentacionDelIndex";
 
 const ItemListContainer = () => {
   //PRODUCTOS PARA ITEM COUNT
@@ -28,7 +28,7 @@ const ItemListContainer = () => {
         <h1>FleX - Tu tienda de Sneakers</h1>
         <div className="subrayado"></div>
       </div> */}
-      {/* <InformacionDeProductos /> */}
+      {/* <PresentacionDelIndex /> */}
       <div className="titulo">
         <h3 className="">Nuestros productos</h3>
         <div className="subrayado"></div>

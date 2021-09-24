@@ -10,7 +10,7 @@ import AdidasLogo from "../img/logos/adidas.png";
 import Yeezy1 from "../img/sneaker/yeezy/1.jfif";
 import Yeezy2 from "../img/sneaker/yeezy/2.jfif";
 
-export const InformacionDeProductos = () => {
+export const PresentacionDelIndex = () => {
   return (
     <div>
       <div className="container">
