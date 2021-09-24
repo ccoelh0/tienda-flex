@@ -4,8 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //COMPONENTES
 import NavBar from "./componentes/Nav/NavBar";
-import ItemListContainer from "./componentes/section/ItemListContainer";
-import RouteContainer from "./componentes/section/RouteContainer";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import Footer from "./componentes/Footer";
 
 function App() {
@@ -13,8 +12,7 @@ function App() {
     <div className="app">
       <Router>
         <NavBar />
-        <ItemListContainer greeting="Tu carrito esta vacio!" />
-        <RouteContainer />
+        <ItemListContainer />
         <Footer />
       </Router>
     </div>

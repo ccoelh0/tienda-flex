@@ -1,6 +1,4 @@
 import React from "react";
-import "../css/Home.css";
-import Carusel from "./Carrusel";
 
 //Imagenes Jordan
 import NikeLogo from "../img/logos/nike.png";
@@ -12,16 +10,9 @@ import AdidasLogo from "../img/logos/adidas.png";
 import Yeezy1 from "../img/sneaker/yeezy/1.jfif";
 import Yeezy2 from "../img/sneaker/yeezy/2.jfif";
 
-export default function Home() {
+export const InformacionDeProductos = () => {
   return (
     <div>
-      <div className="padre-portada">
-        <div className="portada"></div>
-      </div>
-      <div className="titulo">
-        <h1>FleX - Tu tienda de Sneakers</h1>
-        <div className="subrayado"></div>
-      </div>
       <div className="container">
         <div className="row productos-flex">
           <div className="home-flex col-sm-12 col-md-4">
@@ -35,14 +26,30 @@ export default function Home() {
             </p>
             <button className="home-boton">Buy now</button>
           </div>
-          <img src={Nike4} className="col-sm-12 col-md-4" />
-          <img src={Nike6} className="col-sm-12 col-md-4" />
+          <img
+            src={Nike4}
+            className="col-sm-12 col-md-4"
+            alt="imagen de zapatilla Nike"
+          />
+          <img
+            src={Nike6}
+            className="col-sm-12 col-md-4"
+            alt="imagen de zapatilla Nike"
+          />
         </div>
       </div>
       <div className="container">
         <div className="row productos-flex">
-          <img src={Yeezy1} className="d-none d-md-flex col-md-4" />
-          <img src={Yeezy2} className="d-none d-md-flex col-md-4" />
+          <img
+            src={Yeezy1}
+            className="d-none d-md-flex col-md-4"
+            alt="imagen de zapatilla Yeezy"
+          />
+          <img
+            src={Yeezy2}
+            className="d-none d-md-flex col-md-4"
+            alt="imagen de zapatilla Yeezy"
+          />
           <div className="home-flex col-sm-12 col-md-4">
             <img src={AdidasLogo} width="120" alt="Logo extraido de FlatIcon" />
             <h3>Yeezy</h3>
@@ -59,13 +66,6 @@ export default function Home() {
           <img src={Yeezy2} className="d-12 d-md-none" />
         </div>
       </div>
-      <div className="container">
-        <div className="titulo">
-          <h4>ULTIMOS LANZAMIENTOS</h4>
-          <div className="subrayado"></div>
-        </div>
-        <Carusel />
-      </div>
     </div>
   );
-}
+};

@@ -23,12 +23,9 @@
   text-align: center;
 }
 
-.titulo h1 {
+.titulo h1,
+h3 {
   font-size: 40px;
-}
-
-.titulo h4 {
-  font-size: 35px;
 }
 
 .subrayado {
@@ -90,6 +87,49 @@
 .home-boton:active {
   position: relative;
   top: 1px;
+}
+
+/*Carta de producto*/
+
+.cartaProducto {
+  color: white;
+  background: linear-gradient(
+    142deg,
+    rgba(4, 67, 178, 1) 0%,
+    rgba(28, 45, 115, 1) 77%,
+    rgba(20, 30, 48, 1) 100%
+  );
+  border-radius: 3%;
+  padding: 40px;
+  box-shadow: 0px -1px 20px 1px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 0px -1px 20px 1px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px -1px 20px 1px rgba(0, 0, 0, 0.48);
+  font-size: 20px;
+}
+
+.cartaProducto > h4 {
+  font-size: 40px !important;
+}
+
+.cartaProductos-boton {
+  color: black;
+  padding: 3px 15px;
+  border-radius: 20%;
+  background-color: white;
+  margin: 0px 20px 20px 20px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.cartaProductos-total {
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cartaProducto-botonComprar {
+  color: black;
+  padding: 0px 20px;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 720px) {
