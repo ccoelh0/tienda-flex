@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../CssComponentes/Nav.css";
+import "../../componentes-css/Nav.css";
 
 //Import components
 import CartWidget from "./CartWidget";
 
 //Importo imagenes
-import Menu from "../ImgComponentes/bars-solid.svg";
-import Close from "../ImgComponentes/times-solid.svg";
+import Logo from "../../componentes-img/logos/shoes.svg";
+import Menu from "../../componentes-img/bars-solid.svg";
+import Close from "../../componentes-img/times-solid.svg";
 
 export default function Nav() {
   const [state, setState] = useState({ toggle: false });
@@ -20,14 +21,19 @@ export default function Nav() {
 
   return (
     <div>
+      <div className="logo logoDesktop" alt="icono de FlatIcon">
+        <a>
+          <img src={Logo} />
+        </a>
+      </div>
       <header>
         <div className="menu" onClick={menuToggle}>
           <img src={Menu} width="25" alt="menu" />
         </div>
-        <div className="logo">
-          <Link to="/" exact>
-            <a className="logo-a">FleX</a>
-          </Link>
+        <div className="logo logoMobile" alt="icono de FlatIcon">
+          <a>
+            <img src={Logo} />
+          </a>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
@@ -41,7 +47,7 @@ export default function Nav() {
               <Link to="/contact">Contacto</Link>
             </li>
             <li>
-              <Link to="/about">About FleX</Link>
+              <Link to="/about">About Us</Link>
             </li>
             <li className="close">
               <img

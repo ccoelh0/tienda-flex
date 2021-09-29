@@ -1,14 +1,14 @@
 import React from "react";
 
 //Imagenes Jordan
-import NikeLogo from "../img/logos/nike.png";
-import Nike4 from "../img/sneaker/home/home4.jfif";
-import Nike6 from "../img/sneaker/home/home6.jfif";
+import NikeLogo from "../../componentes-img/logos/nike.png";
+import Nike4 from "../../componentes-img/sneaker/home/home4.jfif";
+import Nike6 from "../../componentes-img/sneaker/home/home6.jfif";
 
 //Imagenes Yeezy
-import AdidasLogo from "../img/logos/adidas.png";
-import Yeezy1 from "../img/sneaker/yeezy/1.jfif";
-import Yeezy2 from "../img/sneaker/yeezy/2.jfif";
+import AdidasLogo from "../../componentes-img/logos/adidas.png";
+import Yeezy1 from "../../componentes-img/sneaker/yeezy/1.jfif";
+import Yeezy2 from "../../componentes-img/sneaker/yeezy/2.jfif";
 
 export const PresentacionDelIndex = () => {
   return (

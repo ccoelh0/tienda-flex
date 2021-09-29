@@ -1,10 +1,10 @@
 import React from "react";
-import "./CssComponentes/Footer.css";
+import "../componentes-css/Footer.css";
 
 //Logos
-import Ig from "../componentes/ImgComponentes/logos/ig.png";
-import Fb from "../componentes/ImgComponentes/logos/fb.png";
-import Wp from "../componentes/ImgComponentes/logos/wp.png";
+import Ig from "../componentes-img/logos/ig.png";
+import Fb from "../componentes-img/logos/fb.png";
+import Wp from "../componentes-img/logos/wp.png";
 
 export default function Footer() {
   return (

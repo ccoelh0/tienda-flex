@@ -1,5 +1,5 @@
 import React from "react";
-import CartIcon from "../ImgComponentes/cart-plus-solid.svg";
+import CartIcon from "../../componentes-img/cart-plus-solid.svg";
 
 //Estilos pasados en el CSS de nav
 export default function CartWidget(props) {

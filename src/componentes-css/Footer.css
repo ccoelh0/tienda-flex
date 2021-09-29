@@ -4,13 +4,14 @@
 }
 
 .footer-padre {
-  background: rgb(4, 67, 178);
+  /* background: rgb(4, 67, 178);
   background: linear-gradient(
     142deg,
     rgba(4, 67, 178, 1) 0%,
     rgba(28, 45, 115, 1) 77%,
     rgba(20, 30, 48, 1) 100%
-  );
+  ); */
+  background-color: #1b1f23;
   color: white;
   padding-top: 40px;
   margin-top: 40px;
@@ -85,7 +86,7 @@
 .footer-derechos {
   margin-top: 50px;
   padding: 20px;
-  background-color: #1b1f23;
+  background-color: white;
 }
 
 .footer-derechos h4 {
@@ -96,7 +97,7 @@
 
 .footer-derechos h4 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .footer-logos-celular {
@@ -125,13 +126,13 @@
 
 @media only screen and (max-width: 767px) {
   .footer-padre {
-    background: rgb(4, 67, 178);
-    background: linear-gradient(
+    background: black;
+    /* background: linear-gradient(
       142deg,
       rgba(4, 67, 178, 1) 0%,
       rgba(28, 45, 115, 1) 77%,
       rgba(20, 30, 48, 1) 100%
-    );
+    ); */
     color: white;
     padding: 40px 0px;
     margin-top: 40px;

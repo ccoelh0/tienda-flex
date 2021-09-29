@@ -7,17 +7,23 @@ header {
   align-items: center;
   overflow: hidden;
 }
-header .logo a {
-  text-decoration: none;
-  /* text-transform: uppercase; */
-  color: black;
-  font-family: "Vollkorn", serif !important;
-  font-size: 35px;
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header .logo .logo-a:hover {
-  color: #0443b2;
-  cursor: pointer;
+.logo img {
+  width: 100px;
+}
+
+.logoDesktop {
+  display: flex;
+}
+
+.logoMobile {
+  display: none;
 }
 
 header nav {
@@ -38,7 +44,7 @@ nav ul li a {
   font-size: 17px;
 }
 nav ul li a:hover {
-  color: #0443b2;
+  color: #a5243d;
 }
 nav .nav-cart {
   cursor: pointer;
@@ -50,7 +56,7 @@ nav .nav-cart span {
   position: absolute;
   top: -15px;
   right: -15px;
-  background: #0443b2;
+  background: #a5243d;
   font-size: 15px;
   color: white;
   padding: 2px 7px;
@@ -65,6 +71,14 @@ header .close {
   display: none;
 }
 @media (max-width: 650px) {
+  .logoDesktop {
+    display: none;
+  }
+
+  .logoMobile {
+    display: block;
+  }
+
   header ul {
     position: fixed;
     top: 0;
