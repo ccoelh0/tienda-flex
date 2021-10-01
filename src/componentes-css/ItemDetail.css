@@ -1,0 +1,105 @@
+.detalles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 60px 0;
+}
+
+.detalles-imgPrincipal {
+  max-width: 500px;
+  min-width: 400px;
+  display: block;
+  object-fit: cover;
+  margin: 0px 25px;
+}
+
+.detalles-contenido {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenido h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+.contenido h3 {
+  color: #585858;
+  font-size: 30px;
+  padding: 10px 0px;
+}
+
+.contenido-precioTalle {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-precioTalle p {
+  margin-right: 80px;
+}
+
+.contenedor-talles button {
+  box-shadow: inset 0px 1px 0px 0px #000000;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.contenedor-talles button:active {
+  position: relative;
+  top: 1px;
+  color: white;
+  background-color: #000;
+}
+
+.contenido-img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 5px;
+}
+
+.contenido-img img {
+  width: 30px;
+  margin: 10px;
+}
+
+.contenido-img p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1019px) {
+  .detalles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+  }
+
+  .detalles-contenido {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contenido-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+  }
+}

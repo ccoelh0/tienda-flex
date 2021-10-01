@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //COMPONENTES
 import NavBar from "./componentes/Nav/NavBar";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./componentes/ItemListDetails/ItemDetailContainer";
 import Footer from "./componentes/Footer";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <NavBar />
         <ItemListContainer />
+        <ItemDetailContainer />
         <Footer />
       </Router>
     </div>

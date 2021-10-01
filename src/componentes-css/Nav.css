@@ -11,11 +11,17 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
 .logo img {
   width: 100px;
+}
+
+.logo h1 {
+  margin: 0;
+  text-transform: lowercase;
 }
 
 .logoDesktop {
@@ -31,6 +37,7 @@ header nav {
 }
 nav ul {
   margin: 0;
+  padding: 0;
 }
 nav ul li {
   list-style: none;

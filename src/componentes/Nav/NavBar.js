@@ -25,6 +25,7 @@ export default function Nav() {
         <a>
           <img src={Logo} />
         </a>
+        <h1>Tienda Flex</h1>
       </div>
       <header>
         <div className="menu" onClick={menuToggle}>
@@ -38,16 +39,16 @@ export default function Nav() {
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">All</Link>
             </li>
             <li>
-              <Link to="/productos">Productos</Link>
+              <Link to="/productos">Nike</Link>
             </li>
             <li>
-              <Link to="/contact">Contacto</Link>
+              <Link to="/contact">Jordan</Link>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
+              <Link to="/about">Yeezy</Link>
             </li>
             <li className="close">
               <img
