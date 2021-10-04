@@ -4,13 +4,11 @@ import "../../componentes-css/Productos.css";
 //Componentes
 // import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
-// import { PresentacionDelIndex } from "./PresentacionDelIndex";
 
 //JSON
 import Items from "../../../src/items.json";
 
 const ItemListContainer = () => {
-  //BOTONERA
   //PRODUCTOS PARA ITEM COUNT
   // let arrayDeProductos = {
   //   producto: "Jordan 1",
@@ -47,7 +45,6 @@ const ItemListContainer = () => {
 
   return (
     <React.Fragment>
-      {/* <PresentacionDelIndex /> */}
       <div className="titulo">
         <h3 className="">Nuestros productos</h3>
         <div className="subrayado"></div>

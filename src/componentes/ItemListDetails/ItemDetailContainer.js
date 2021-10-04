@@ -4,13 +4,23 @@ import React, { useState, useEffect } from "react";
 import { ItemDetail } from "./ItemDetail";
 
 //JSON
-import Items from "../../../src/items.json";
+// import Items from "../../../src/items.json";
 
 export const ItemDetailContainer = () => {
-  const [itemDetail, setItemDetail] = useState([]);
+  let producto = {
+    id: 4,
+    nombre: "Nike Sacai",
+    precio: 210,
+    imgUrl:
+      "https://images.unsplash.com/photo-1606890657878-16393aa45766?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+    stock: 0,
+    talles: ["No hay talles"],
+  };
+
+  const [productoDetalle, setProductoDetalle] = useState([]);
 
   useEffect(() => {
-    obtenerDatos(Items);
+    obtenerDatos(producto);
   }, []);
 
   const getItems = (items) => {
@@ -23,7 +33,7 @@ export const ItemDetailContainer = () => {
 
   async function obtenerDatos(items) {
     const data = await getItems(items);
-    setItemDetail(data);
+    setProductoDetalle(data);
   }
 
   return (
@@ -32,7 +42,7 @@ export const ItemDetailContainer = () => {
         <h3 className="">Detalles del producto</h3>
         <div className="subrayado"></div>
       </div>
-      <ItemDetail items={itemDetail} />
+      <ItemDetail item={productoDetalle} />
     </div>
   );
 };
