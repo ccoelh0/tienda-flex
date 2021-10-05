@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../componentes-css/Nav.css";
 
 //Import components
@@ -11,6 +11,7 @@ import Menu from "../../componentes-img/bars-solid.svg";
 import Close from "../../componentes-img/times-solid.svg";
 
 export default function Nav() {
+  //Menu togle
   const [state, setState] = useState({ toggle: false });
 
   function menuToggle() {
@@ -22,9 +23,9 @@ export default function Nav() {
   return (
     <div>
       <div className="logo logoDesktop" alt="icono de FlatIcon">
-        <a>
-          <img src={Logo} />
-        </a>
+        <Link to="/">
+          <img src={Logo} alt="Icono" />
+        </Link>
         <h1>Tienda Flex</h1>
       </div>
       <header>
@@ -32,23 +33,47 @@ export default function Nav() {
           <img src={Menu} width="25" alt="menu" />
         </div>
         <div className="logo logoMobile" alt="icono de FlatIcon">
-          <a>
-            <img src={Logo} />
-          </a>
+          <Link to="/">
+            <img src={Logo} alt="Icono" />
+          </Link>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/">All</Link>
+              <NavLink
+                to="/category"
+                className="botonNavBar"
+                // activeStyle={{ color: "#a5243d" }}
+              >
+                All
+              </NavLink>
             </li>
             <li>
-              <Link to="/productos">Nike</Link>
+              <NavLink
+                to="/category/Nike"
+                className="botonNavBar"
+                activeStyle={{ color: "#a5243d" }}
+              >
+                Nike
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">Jordan</Link>
+              <NavLink
+                to="/category/Jordan"
+                className="botonNavBar"
+                activeStyle={{ color: "#a5243d" }}
+              >
+                Jordan
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">Yeezy</Link>
+              <NavLink
+                to="/category/Yeezy"
+                className="botonNavBar"
+                activeStyle={{ color: "#a5243d" }}
+              >
+                Yeezy
+              </NavLink>
             </li>
             <li className="close">
               <img
@@ -59,9 +84,9 @@ export default function Nav() {
               />
             </li>
           </ul>
-          <Link to="/itemListContainer">
+          <NavLink to="/carrito">
             <CartWidget cantidad="0" />
-          </Link>
+          </NavLink>
         </nav>
       </header>
     </div>

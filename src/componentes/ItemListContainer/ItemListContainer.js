@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import "../../componentes-css/Productos.css";
 
 //Componentes
@@ -9,6 +10,7 @@ import { ItemList } from "./ItemList";
 import Items from "../../../src/items.json";
 
 const ItemListContainer = () => {
+  //Contador
   //PRODUCTOS PARA ITEM COUNT
   // let arrayDeProductos = {
   //   producto: "Jordan 1",
@@ -21,19 +23,21 @@ const ItemListContainer = () => {
   // function onAdd(productoAgregado) {
   //   alert(`Agregaste ${productoAgregado} productos a tu carrito!`);
   // }
-  /////////////////////////////////////////////////////////////////
 
-  //Lista de productos
   const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    obtenerDatos(Items);
-  }, []);
+  const { categoryId: categoriaDelProd } = useParams();
 
   const getItems = (items) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(items);
+        if (categoriaDelProd) {
+          const filtroXCategoria = items.filter(
+            (item) => item.categoria === categoriaDelProd
+          );
+          resolve(filtroXCategoria);
+        } else {
+          resolve(Items);
+        }
       }, 2000);
     });
   };
@@ -42,6 +46,12 @@ const ItemListContainer = () => {
     const data = await getItems(items);
     setProductos(data);
   }
+
+  //[categoriaDelProd] => se agrega en los [] para
+  //recibir actualizacion constante
+  useEffect(() => {
+    obtenerDatos(Items);
+  }, [categoriaDelProd]);
 
   return (
     <React.Fragment>

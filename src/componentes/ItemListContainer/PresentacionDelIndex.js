@@ -24,7 +24,7 @@ export const PresentacionDelIndex = () => {
               Air Jordan was created for Hall of Fame former basketball player
               Michael Jordan during his time with the Chicago Bulls.
             </p>
-            <button className="home-boton">Buy now</button>
+            {/* <button className="home-boton">Buy now</button> */}
           </div>
           <img
             src={Nike4}
@@ -60,7 +60,7 @@ export const PresentacionDelIndex = () => {
               its high-end limited edition colorways and general releases
               offered by the Yeezy Boost sneakers line up.
             </p>
-            <button className="home-boton">Buy now</button>
+            {/* <button className="home-boton">Buy now</button> */}
           </div>
           <img src={Yeezy1} className="col-12 d-md-none" />
           <img src={Yeezy2} className="d-12 d-md-none" />

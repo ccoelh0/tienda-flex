@@ -5,7 +5,8 @@
     "precio": 200,
     "imgUrl": "https://images.unsplash.com/photo-1606890542488-1f7a7aa9863a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
     "stock": 20,
-    "talles": [38, 39, 40, 41, 42, 43]
+    "categoria": "Yeezy",
+    "talle": 41
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "precio": 150,
     "imgUrl": "https://images.unsplash.com/photo-1606890658177-58039f9527df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
     "stock": 12,
-    "talles": [38, 39, 40, 41, 42, 43]
+    "categoria": "Nike",
+    "talle": 42
   },
   {
     "id": 3,
@@ -21,14 +23,16 @@
     "precio": 500,
     "imgUrl": "https://images.unsplash.com/photo-1606890542166-00bad9f493ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
     "stock": 8,
-    "talles": [38, 39, 40, 41, 42, 43]
+    "categoria": "Jordan",
+    "talle": 41
   },
   {
     "id": 4,
     "nombre": "Nike Sacai",
     "precio": 210,
     "imgUrl": "https://images.unsplash.com/photo-1606890657878-16393aa45766?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
-    "stock": 0,
-    "talles": ["No hay talles"]
+    "stock": 8,
+    "categoria": "Nike",
+    "talle": 40
   }
 ]

@@ -43,16 +43,21 @@ nav ul li {
   list-style: none;
   display: inline-block;
 }
-nav ul li a {
+nav ul li .botonNavBar {
   text-decoration: none;
   /* text-transform: uppercase; */
   color: black;
   padding: 0 15px;
   font-size: 17px;
 }
-nav ul li a:hover {
+.botonNavBar:hover {
   color: #a5243d;
 }
+
+.botonNavBarActive {
+  color: #a5243d;
+}
+
 nav .nav-cart {
   cursor: pointer;
   position: relative;

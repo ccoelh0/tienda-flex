@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../../componentes-css/CardItem.css";
 
@@ -15,14 +16,18 @@ export const Item = ({ item }) => {
 
   return (
     <div className="container-itemCard" id={id}>
-      <img className="itemCard-img" src={imgUrl} />
+      <Link to={`/item/${id}`}>
+        <img className="itemCard-img" src={imgUrl} alt={nombre} />
+      </Link>
       <div className="itemCard-containerDetails">
         <h3>{nombre}</h3>
         <span>Precio: ${precio}</span>
         <span style={{ color: stockDisponible(stock) }}>
           Stock disponible: {stock}
         </span>
-        <button>Ver detalles</button>
+        <Link to={`/item/${item.id}`}>
+          <button>Ver detalles</button>
+        </Link>
       </div>
     </div>
   );

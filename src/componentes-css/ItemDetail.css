@@ -6,8 +6,7 @@
 }
 
 .detalles-imgPrincipal {
-  max-width: 500px;
-  min-width: 400px;
+  width: 350px;
   display: block;
   object-fit: cover;
   margin: 0px 25px;
@@ -38,12 +37,13 @@
 }
 
 .contenido-precioTalle p {
-  margin-right: 80px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-.contenedor-talles button {
+.contenido-precioTalle button {
   box-shadow: inset 0px 1px 0px 0px #000000;
-  background-color: #fff;
+  background-color: #e9e9e9;
   border-radius: 3px;
   border: 1px solid #000000;
   display: inline-block;
@@ -52,9 +52,10 @@
   font-size: 16px;
   padding: 5px;
   margin: 2px;
+  width: 20%;
 }
 
-.contenedor-talles button:active {
+.contenido-precioTalle button:active {
   position: relative;
   top: 1px;
   color: white;

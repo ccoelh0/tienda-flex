@@ -40,6 +40,10 @@
   margin: 0;
 }
 
+.itemCard-containerDetails a {
+  text-decoration: none;
+}
+
 .itemCard-containerDetails button {
   display: block;
   cursor: pointer;
@@ -51,7 +55,7 @@
   font-family: Arial;
   font-size: 17px;
   padding: 5px 10px;
-  text-decoration: none;
+  text-decoration: none !important;
   width: 80%;
   margin: 10px auto;
 }
