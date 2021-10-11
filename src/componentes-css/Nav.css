@@ -20,8 +20,30 @@ header {
 }
 
 .logo h1 {
-  margin: 0;
-  text-transform: lowercase;
+  margin: 40px 0 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: #a5243d;
+  background: -webkit-linear-gradient(
+    to right,
+    #a5243d 0%,
+    #6e2a37 50%,
+    #551d28 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #a5243d 0%,
+    #6e2a37 50%,
+    #551d28 100%
+  );
+  background: linear-gradient(to right, #a5243d 0%, #6e2a37 50%, #551d28 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .logoDesktop {
@@ -83,6 +105,11 @@ header .close {
   display: none;
 }
 @media (max-width: 650px) {
+  .logo h1 {
+    margin: 20px 0;
+    font-size: 30px;
+  }
+
   .logoDesktop {
     display: none;
   }

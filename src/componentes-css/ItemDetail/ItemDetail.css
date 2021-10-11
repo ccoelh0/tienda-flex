@@ -1,0 +1,145 @@
+.contenedorGeneral {
+  box-shadow: 2px 8px 20px #ddd;
+  transition: 0.5s linear;
+  padding: 40px 0;
+  display: grid;
+  margin: 60px 90px;
+  align-self: center;
+  justify-self: center;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-areas:
+    ". img detalles ."
+    ". img detalles ."
+    ". img tarjetas .";
+}
+
+.contenedor-imagen {
+  grid-area: img;
+  align-self: self-end;
+  justify-self: end;
+  margin-right: 30px;
+}
+
+.contenedor-imagen img {
+  width: 360px;
+}
+
+.contenedor-img .contenedor__imagen {
+  width: 300px;
+}
+
+.contenedor-detalles {
+  grid-area: detalles;
+}
+
+.detalles-titulo h2 {
+  color: #000000;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.detalles-titulo h3 {
+  color: #7b7f85;
+}
+
+.contenedor-talle {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contenedor-talle p {
+  margin: 0;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 80px 5px;
+}
+
+.cant-boton {
+  width: 50px;
+  height: 45px;
+  border-radius: 35%;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.cant-boton:active {
+  position: relative;
+  top: 1px;
+}
+
+.boton-span {
+  margin: 0 30px;
+  font-size: 25px;
+}
+
+.botonComprarGral button {
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 5px 5px;
+  width: 100%;
+  height: 45px;
+}
+
+.botonComprarGral button:active {
+  position: relative;
+  top: 1px;
+}
+
+.contenedor-tarjetas {
+  grid-area: tarjetas;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.contenedor-tarjetas div {
+  margin-right: 20px;
+}
+
+.contenido-tarjetas img {
+  width: 30px;
+}
+
+.contenedor-agregado {
+  margin: 80px 10px;
+}
+
+.contenedor-agregado h4 {
+  font-size: 25px;
+  color: #7b7f85;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contenedor-agregado .agregado-boton {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 5px 5px;
+  width: 230px;
+  height: 45px;
+}

@@ -4,18 +4,18 @@
     "nombre": "Yeezy 380",
     "precio": 200,
     "imgUrl": "https://images.unsplash.com/photo-1606890542488-1f7a7aa9863a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
-    "stock": 20,
+    "stock": 10,
     "categoria": "Yeezy",
-    "talle": 41
+    "talle": [40, 41, 42, 43]
   },
   {
     "id": 2,
     "nombre": "Nike Dunk",
     "precio": 150,
     "imgUrl": "https://images.unsplash.com/photo-1606890658177-58039f9527df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
-    "stock": 12,
+    "stock": 10,
     "categoria": "Nike",
-    "talle": 42
+    "talle": [38, 42, 44]
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "imgUrl": "https://images.unsplash.com/photo-1606890542166-00bad9f493ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80",
     "stock": 8,
     "categoria": "Jordan",
-    "talle": 41
+    "talle": [40, 41, 42, 43]
   },
   {
     "id": 4,
@@ -33,6 +33,6 @@
     "imgUrl": "https://images.unsplash.com/photo-1606890657878-16393aa45766?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
     "stock": 8,
     "categoria": "Nike",
-    "talle": 40
+    "talle": [40, 41, 42, 43]
   }
 ]

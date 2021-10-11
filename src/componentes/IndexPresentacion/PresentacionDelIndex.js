@@ -1,4 +1,7 @@
 import React from "react";
+import "../../componentes-css/Productos.css";
+
+// import Portada from "../../componentes-img/sneaker/home/jordan13.jfif";
 
 //Imagenes Jordan
 import NikeLogo from "../../componentes-img/logos/nike.png";
@@ -13,6 +16,13 @@ import Yeezy2 from "../../componentes-img/sneaker/yeezy/2.jfif";
 export const PresentacionDelIndex = () => {
   return (
     <div>
+      <div className="portada">
+        <div className="portada-detalles">
+          <h2>Jordan I</h2>
+          <p>Explorá lo mejor de la nueva colección</p>
+          <button className="home-boton">Comprar</button>
+        </div>
+      </div>
       <div className="container">
         <div className="row productos-flex">
           <div className="home-flex col-sm-12 col-md-4">
@@ -24,7 +34,7 @@ export const PresentacionDelIndex = () => {
               Air Jordan was created for Hall of Fame former basketball player
               Michael Jordan during his time with the Chicago Bulls.
             </p>
-            {/* <button className="home-boton">Buy now</button> */}
+            <button className="home-boton">Buy now</button>
           </div>
           <img
             src={Nike4}
@@ -60,7 +70,7 @@ export const PresentacionDelIndex = () => {
               its high-end limited edition colorways and general releases
               offered by the Yeezy Boost sneakers line up.
             </p>
-            {/* <button className="home-boton">Buy now</button> */}
+            <button className="home-boton">Buy now</button>
           </div>
           <img src={Yeezy1} className="col-12 d-md-none" />
           <img src={Yeezy2} className="d-12 d-md-none" />

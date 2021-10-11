@@ -6,7 +6,6 @@ import "../../componentes-css/Nav.css";
 import CartWidget from "./CartWidget";
 
 //Importo imagenes
-import Logo from "../../componentes-img/logos/shoes.svg";
 import Menu from "../../componentes-img/bars-solid.svg";
 import Close from "../../componentes-img/times-solid.svg";
 
@@ -24,9 +23,8 @@ export default function Nav() {
     <div>
       <div className="logo logoDesktop" alt="icono de FlatIcon">
         <Link to="/">
-          <img src={Logo} alt="Icono" />
+          <h1>Tienda Flex</h1>
         </Link>
-        <h1>Tienda Flex</h1>
       </div>
       <header>
         <div className="menu" onClick={menuToggle}>
@@ -34,7 +32,7 @@ export default function Nav() {
         </div>
         <div className="logo logoMobile" alt="icono de FlatIcon">
           <Link to="/">
-            <img src={Logo} alt="Icono" />
+            <h1>Tienda Flex</h1>
           </Link>
         </div>
         <nav>
@@ -84,7 +82,7 @@ export default function Nav() {
               />
             </li>
           </ul>
-          <NavLink to="/carrito">
+          <NavLink to="/cart">
             <CartWidget cantidad="0" />
           </NavLink>
         </nav>
