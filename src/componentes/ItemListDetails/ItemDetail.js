@@ -9,42 +9,38 @@ import Cambios from "../../componentes-img/logos/cambios.png";
 import Tarjetas from "../../componentes-img/logos/tarjetas.png";
 import Retiro from "../../componentes-img/logos/retiro.png";
 
-export const ItemDetail = ({ item }) => {
-  const { nombre, imgUrl, precio, talle, stock, id } = item;
+//Context
+import { cartContext } from "../../contexto/CartContext";
 
-  //Funcion de agregar producto al carrito
-  const [productoElegido, setProductoElegido] = useState([]);
+export const ItemDetail = ({ item }) => {
+  // const { nombre, imgUrl, precio, talle, stock, id } = item;
+  const { addItem } = React.useContext(cartContext);
 
   const onAdd = (quantityToAdd, talleElegido) => {
     alert(`Agregaste ${quantityToAdd} productos a tu carrito!`);
-    setProductoElegido({
-      nombre: nombre,
-      imgUrl: imgUrl,
-      precio: precio,
-      cantidadElegida: quantityToAdd,
-      talle: parseInt(talleElegido),
-      id: id,
-    });
+    addItem(quantityToAdd, talleElegido, item);
   };
-
-  console.log(productoElegido);
 
   return (
     <React.Fragment>
-      <div className="contenedorGeneral" key={id}>
+      <div className="contenedorGeneral" key={`item-${item.id}`}>
         <div className="contenedor-imagen">
-          <img src={imgUrl} alt={nombre} className="contenedor__imagen" />
+          <img
+            src={item.imgUrl}
+            alt={item.nombre}
+            className="contenedor__imagen"
+          />
         </div>
         <div className="contenedor-detalles">
           <div className="detalles-titulo">
-            <h2>{nombre}</h2>
-            <h3>$ {precio}</h3>
+            <h2>{item.nombre}</h2>
+            <h3>$ {item.precio}</h3>
           </div>
           <ItemCount
-            precio={precio}
-            talle={talle}
+            precio={item.precio}
+            talle={item.talle}
             initial="1"
-            stock={stock}
+            stock={item.stock}
             onAdd={onAdd}
           />
         </div>

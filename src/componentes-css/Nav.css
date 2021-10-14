@@ -21,22 +21,23 @@ header {
 
 .logo h1 {
   margin: 40px 0 20px;
+  font-weight: 400;
   font-size: 40px;
   text-transform: uppercase;
-  background: #a5243d;
+  background: #0147bf;
   background: -webkit-linear-gradient(
     to right,
-    #a5243d 0%,
-    #6e2a37 50%,
-    #551d28 100%
+    #0147bf 0%,
+    #0f3678 50%,
+    #091b39 100%
   );
   background: -moz-linear-gradient(
     to right,
-    #a5243d 0%,
-    #6e2a37 50%,
-    #551d28 100%
+    #0147bf 0%,
+    #0f3678 50%,
+    #091b39 100%
   );
-  background: linear-gradient(to right, #a5243d 0%, #6e2a37 50%, #551d28 100%);
+  background: linear-gradient(to right, #0147bf 0%, #0f3678 50%, #091b39 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,11 +74,11 @@ nav ul li .botonNavBar {
   font-size: 17px;
 }
 .botonNavBar:hover {
-  color: #a5243d;
+  color: #0147bf;
 }
 
 .botonNavBarActive {
-  color: #a5243d;
+  color: #0147bf;
 }
 
 nav .nav-cart {

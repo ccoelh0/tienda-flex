@@ -41,7 +41,7 @@ const ItemListContainer = () => {
   return (
     <React.Fragment>
       <div className="titulo">
-        <h3 className="">Nuestros productos</h3>
+        <h2 className="">Nuestros productos</h2>
         <div className="subrayado"></div>
         <br />
         <br />

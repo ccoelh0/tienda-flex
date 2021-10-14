@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
-
 .padre-portada {
   width: 100%;
   display: flex;
@@ -11,13 +9,13 @@
 .portada {
   background: url("../componentes-img/img1.png");
   width: 80%;
-  height: 80vh;
+  height: 500px;
   background-size: cover;
   margin: 30px auto 60px;
   background-position: center;
   display: flex;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: flex-end;
   text-align: end;
 }
 
@@ -26,16 +24,16 @@
 }
 
 .portada .portada-detalles h2 {
-  font-family: "Candal", sans-serif;
   color: white;
+  font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
-  text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.6);
 }
 
 .portada .portada-detalles p {
   color: white;
   font-size: 20px;
+  font-weight: 100;
 }
 
 .titulo {
@@ -47,21 +45,22 @@
   text-align: center;
 }
 
-.titulo h1,
+.titulo h2,
 h3 {
   font-size: 40px;
+  padding-bottom: 5px;
 }
 
 .subrayado {
-  background: rgb(165, 36, 61);
+  background: rgb(1, 71, 191);
   background: linear-gradient(
     142deg,
-    rgba(165, 36, 61, 1) 0%,
-    rgba(110, 42, 55, 1) 66%,
-    rgba(85, 29, 40, 1) 100%
+    rgba(1, 71, 191, 1) 0%,
+    rgba(15, 54, 120, 1) 50%,
+    rgba(9, 27, 57, 1) 100%
   );
   height: 5px;
-  width: 25%;
+  width: 15%;
 }
 
 .productos-flex {

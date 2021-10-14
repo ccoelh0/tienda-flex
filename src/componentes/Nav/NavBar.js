@@ -50,7 +50,7 @@ export default function Nav() {
               <NavLink
                 to="/category/Nike"
                 className="botonNavBar"
-                activeStyle={{ color: "#a5243d" }}
+                activeStyle={{ color: "#0147bf" }}
               >
                 Nike
               </NavLink>
@@ -59,7 +59,7 @@ export default function Nav() {
               <NavLink
                 to="/category/Jordan"
                 className="botonNavBar"
-                activeStyle={{ color: "#a5243d" }}
+                activeStyle={{ color: "#0147bf" }}
               >
                 Jordan
               </NavLink>
@@ -68,7 +68,7 @@ export default function Nav() {
               <NavLink
                 to="/category/Yeezy"
                 className="botonNavBar"
-                activeStyle={{ color: "#a5243d" }}
+                activeStyle={{ color: "#0147bf" }}
               >
                 Yeezy
               </NavLink>

@@ -108,7 +108,7 @@ export const ItemCount = (props) => {
           </div>
         </div>
       </div>
-      <div class="contenedor-agregado" style={{ display: botonCarrito }}>
+      <div className="contenedor-agregado" style={{ display: botonCarrito }}>
         <h4>Producto agregado!</h4>
         <Link to="/cart">
           <button className="agregado-boton">Ver carrito</button>
