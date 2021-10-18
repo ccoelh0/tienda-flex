@@ -24,7 +24,7 @@ function App() {
             <ItemListContainer />
           </Route>
 
-          <Route exact path="/category">
+          <Route exact path="/category/all">
             <ItemListContainer />
           </Route>
 

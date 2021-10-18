@@ -13,7 +13,6 @@ import Retiro from "../../componentes-img/logos/retiro.png";
 import { cartContext } from "../../contexto/CartContext";
 
 export const ItemDetail = ({ item }) => {
-  // const { nombre, imgUrl, precio, talle, stock, id } = item;
   const { addItem } = React.useContext(cartContext);
 
   const onAdd = (quantityToAdd, talleElegido) => {

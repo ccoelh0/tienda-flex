@@ -9,9 +9,7 @@ export const SeleccionarTalle = ({ talle, talleSelect }) => {
           talleSelect(talleElegido);
         }}
       >
-        <option value={0} disabled selected>
-          Talles
-        </option>
+        <option value={0}>Stock disponible</option>
         {talle &&
           talle.map((t) => (
             <option value={t} key={`talle-${t}`}>

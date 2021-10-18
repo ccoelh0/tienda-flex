@@ -8,7 +8,7 @@
 
 .portada {
   background: url("../componentes-img/img1.png");
-  width: 80%;
+  width: 100%;
   height: 500px;
   background-size: cover;
   margin: 30px auto 60px;
@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 30px;
+  margin: 50px;
   text-align: center;
 }
 

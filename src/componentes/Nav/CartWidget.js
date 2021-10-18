@@ -1,14 +1,22 @@
 import React from "react";
 import CartIcon from "../../componentes-img/cart-plus-solid.svg";
+import { cartContext } from "../../contexto/CartContext";
 
-//Estilos pasados en el CSS de nav
-export default function CartWidget(props) {
-  //Desestructuracion
-  const { cantidad } = props;
+export default function CartWidget() {
+  const { carrito } = React.useContext(cartContext);
+
+  const cart = carrito.map((item) => item.cantidad);
+
+  //Suma cada cantidad de items que se recupero de map
+  let itemsTotal = cart.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+
   return (
     <div className="nav-cart">
-      <span>{cantidad}</span>
-      <img src={CartIcon} width="30" alt="carrito" />
+      {itemsTotal !== 0 ? <span>{itemsTotal}</span> : <></>}
+      <img src={CartIcon} width="25" alt="carrito" />
     </div>
   );
 }

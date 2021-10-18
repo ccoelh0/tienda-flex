@@ -89,10 +89,10 @@ nav .nav-cart {
 }
 nav .nav-cart span {
   position: absolute;
-  top: -15px;
+  top: -13px;
   right: -15px;
-  background: #a5243d;
-  font-size: 15px;
+  background: #0146bc;
+  font-size: 12px;
   color: white;
   padding: 2px 7px;
   border-radius: 50%;

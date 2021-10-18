@@ -54,7 +54,7 @@ export const ItemCount = (props) => {
 
   //Funcion para el carrito y que valida onAdd y hace aparecer ver carrito
   const agregarProductoAlCarrito = (stock, cantidad, talleElegido) => {
-    if (talleElegido !== 0) {
+    if (talleElegido != 0) {
       let cantidadDeProductosSeleccionados = cantidad;
       onAdd(cantidadDeProductosSeleccionados, talleElegido);
       setBotonCarrito("block");

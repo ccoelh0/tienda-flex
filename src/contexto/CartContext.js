@@ -39,8 +39,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  console.log(carrito);
-
   const removeItem = (item) => {
     const nuevaLista = carrito.filter(
       (itemCarrito) => itemCarrito.item.id !== item.item.id

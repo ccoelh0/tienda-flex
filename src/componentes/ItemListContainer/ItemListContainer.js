@@ -43,8 +43,6 @@ const ItemListContainer = () => {
       <div className="titulo">
         <h2 className="">Nuestros productos</h2>
         <div className="subrayado"></div>
-        <br />
-        <br />
       </div>
       <ItemList items={productos} />
     </React.Fragment>

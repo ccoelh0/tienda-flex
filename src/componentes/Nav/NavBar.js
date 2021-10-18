@@ -20,7 +20,7 @@ export default function Nav() {
   const { toggle } = state;
 
   return (
-    <div>
+    <>
       <div className="logo logoDesktop" alt="icono de FlatIcon">
         <Link to="/">
           <h1>Tienda Flex</h1>
@@ -39,9 +39,9 @@ export default function Nav() {
           <ul className={toggle ? "toggle" : ""}>
             <li>
               <NavLink
-                to="/category"
+                to="/category/all"
                 className="botonNavBar"
-                // activeStyle={{ color: "#a5243d" }}
+                activeStyle={{ color: "#0147bf" }}
               >
                 All
               </NavLink>
@@ -83,10 +83,10 @@ export default function Nav() {
             </li>
           </ul>
           <NavLink to="/cart">
-            <CartWidget cantidad="0" />
+            <CartWidget />
           </NavLink>
         </nav>
       </header>
-    </div>
+    </>
   );
 }
