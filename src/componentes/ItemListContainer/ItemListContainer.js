@@ -1,41 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "../../componentes-css/Productos.css";
+import { getFirestore } from "../../firebase/firebaseConfig";
 
 //Componentes
 import { ItemList } from "./ItemList";
-
-//JSON
-import Items from "../../../src/items.json";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const { categoryId: categoriaDelProd } = useParams();
 
-  const getItems = (items) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
+  const obtenerDatos = () => {
+    const db = getFirestore();
+    const itemCollection = db.collection("items");
+    itemCollection
+      .get()
+      .then((informacionBaseDatos) => {
+        if (informacionBaseDatos.size === 0) {
+          console.log("No Hay resultados");
+        }
+        console.log("documentos: ", informacionBaseDatos.docs);
+        const productos = informacionBaseDatos.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
         if (categoriaDelProd) {
-          const filtroXCategoria = items.filter(
+          const filtro = productos.filter(
             (item) => item.categoria === categoriaDelProd
           );
-          resolve(filtroXCategoria);
+          console.log(filtro);
+          setProductos(filtro);
         } else {
-          resolve(Items);
+          setProductos(productos);
         }
-      }, 2000);
-    });
+      })
+      .catch((error) => {
+        console.error("Error al traer los contactos", error);
+      });
   };
 
-  async function obtenerDatos(items) {
-    const data = await getItems(items);
-    setProductos(data);
-  }
-
-  //[categoriaDelProd] => se agrega en los [] para
-  //recibir actualizacion constante
   useEffect(() => {
-    obtenerDatos(Items);
+    obtenerDatos();
   }, [categoriaDelProd]);
 
   return (

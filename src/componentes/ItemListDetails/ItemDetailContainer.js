@@ -1,34 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { getFirestore } from "../../firebase/firebaseConfig";
 
 //Componentes
 import { ItemDetail } from "./ItemDetail";
-
-//JSON
-import Items from "../../../src/items.json";
 
 const ItemDetailContainer = () => {
   const [productoDetalle, setProductoDetalle] = useState({});
   const { id: idProducto } = useParams();
 
-  const getItems = (items) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const buscarProductoPorId = items.find(
-          (item) => item.id === parseInt(idProducto)
-        );
-        resolve(buscarProductoPorId);
-      }, 2000);
-    });
+  const obtenerDatosById = () => {
+    const db = getFirestore();
+    const itemCollection = db.collection("items");
+    const documentSpecific = itemCollection.doc(idProducto);
+    documentSpecific
+      .get()
+      .then((data) => {
+        if (data.size === 0) {
+          console.log("No hay resulatdos");
+        }
+        console.log("data: ", data.data());
+        const detalle = data.data();
+        setProductoDetalle(detalle);
+      })
+      .catch((error) => {
+        console.error("Error al traer los contactos", error);
+      });
   };
 
-  async function obtenerDatos(items) {
-    const data = await getItems(items);
-    setProductoDetalle(data);
-  }
-
   useEffect(() => {
-    obtenerDatos(Items);
+    obtenerDatosById();
   }, [idProducto]);
 
   return (
