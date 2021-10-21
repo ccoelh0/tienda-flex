@@ -9,6 +9,8 @@ export const CartProvider = ({ children }) => {
 
   const addItem = (cantidad, talle, itemNuevo) => {
     //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+
+    //Aca hay que tener cuidado, porque el id en el firabesa hay que buscarlo dentro del item, pero dentro de la lista dentro de lista.item
     const findPorId = carrito.findIndex(
       (listaDeItems) => listaDeItems.item.id === itemNuevo.id
     );
@@ -17,13 +19,14 @@ export const CartProvider = ({ children }) => {
     if (findPorId === -1) {
       const listaDeItems = [...carrito, { item: itemNuevo, cantidad, talle }];
       setCarrito(listaDeItems);
+      console.log("LISTA:", listaDeItems);
     } else {
       const nuevaCantidad = carrito[findPorId].cantidad + cantidad;
       const talles = [carrito[findPorId].talle, talle];
       const nuevoTalle = talles.filter((item, i) => talles.indexOf(item) === i);
       const listaViejaDeItems = carrito.filter(
         (listaViejaDeItems) =>
-          listaViejaDeItems.item.id !== carrito[findPorId].item.id
+          listaViejaDeItems.item.nombre !== carrito[findPorId].item.nombre
       );
 
       const listaDeItems = [
@@ -37,6 +40,8 @@ export const CartProvider = ({ children }) => {
       ];
       setCarrito(listaDeItems);
     }
+    // console.log("este es el item", itemNuevo);
+    // console.log("este es el carrito", carrito);
   };
 
   const removeItem = (item) => {
@@ -65,7 +70,7 @@ export const CartProvider = ({ children }) => {
       <cartContext.Provider
         value={{
           carrito,
-          addItem: addItem,
+          addItem,
           removeItem,
           totalDeLaCompra,
           totalAPagar,

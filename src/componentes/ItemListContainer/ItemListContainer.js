@@ -17,9 +17,9 @@ const ItemListContainer = () => {
       .get()
       .then((informacionBaseDatos) => {
         if (informacionBaseDatos.size === 0) {
-          console.log("No Hay resultados");
+          // console.log("No Hay resultados");
         }
-        console.log("documentos: ", informacionBaseDatos.docs);
+        // console.log("documentos: ", informacionBaseDatos.docs);
         const productos = informacionBaseDatos.docs.map((doc) => {
           return { id: doc.id, ...doc.data() };
         });
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
           const filtro = productos.filter(
             (item) => item.categoria === categoriaDelProd
           );
-          console.log(filtro);
+          // console.log(filtro);
           setProductos(filtro);
         } else {
           setProductos(productos);

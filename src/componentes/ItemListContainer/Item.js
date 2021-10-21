@@ -23,7 +23,7 @@ export const Item = ({ item }) => {
         <h3>{nombre}</h3>
         <span>Precio: ${precio}</span>
         <span style={{ color: stockDisponible(stock) }}>
-          Stock disponible: {stock}
+          {stock != 0 ? "Stock disponible" : "Sin stock"}
         </span>
         <Link to={`/item/${item.id}`}>
           <button>Ver detalles</button>

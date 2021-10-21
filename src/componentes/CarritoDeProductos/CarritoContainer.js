@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../contexto/CartContext";
 import "../../componentes-css/carrito/CarritoContainer.css";
 
-//componentes
-
 const CarritoContainer = () => {
   const { carrito, removeItem, totalAPagar, terminarCompra } =
     React.useContext(cartContext);
@@ -61,7 +59,6 @@ const CarritoContainer = () => {
               ))}
             </tfoot>
           </table>
-
           <div className="carrito-terminarCompra">
             <span>Total: $ {totalAPagar()}</span>
             <button
@@ -77,7 +74,7 @@ const CarritoContainer = () => {
           <div className="titulo" style={{ margin: "100px 0" }}>
             <h2>Tu carrito esta vacio</h2>
             <div className="subrayado"></div>
-            <Link style={{ marginTop: "50px" }} to="/category">
+            <Link style={{ marginTop: "50px" }} to="/category/all">
               <button className="boton botonNegroVolverAProd">
                 Ver productos
               </button>

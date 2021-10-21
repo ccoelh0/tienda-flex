@@ -16,17 +16,19 @@ const ItemDetailContainer = () => {
     documentSpecific
       .get()
       .then((data) => {
-        if (data.size === 0) {
-          console.log("No hay resulatdos");
-        }
-        console.log("data: ", data.data());
+        // if (data.size === 0) {
+        //   // console.log("No hay resulatdos");
+        // }
+        // console.log("data: ", data.data());
         const detalle = data.data();
         setProductoDetalle(detalle);
       })
       .catch((error) => {
-        console.error("Error al traer los contactos", error);
+        // console.error("Error al traer los contactos", error);
       });
   };
+
+  // console.log("traigo este:", productoDetalle);
 
   useEffect(() => {
     obtenerDatosById();
