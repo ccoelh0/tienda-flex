@@ -19,7 +19,7 @@ const ItemListContainer = () => {
         if (informacionBaseDatos.size === 0) {
           // console.log("No Hay resultados");
         }
-        // console.log("documentos: ", informacionBaseDatos.docs);
+        console.log("documentos: ", informacionBaseDatos.docs);
         const productos = informacionBaseDatos.docs.map((doc) => {
           return { id: doc.id, ...doc.data() };
         });

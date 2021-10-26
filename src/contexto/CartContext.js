@@ -5,7 +5,6 @@ export const cartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
-  const [totalDeLaCompra, setTotalDeLaCompra] = useState(0);
 
   const addItem = (cantidad, talle, itemNuevo) => {
     //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
@@ -19,7 +18,7 @@ export const CartProvider = ({ children }) => {
     if (findPorId === -1) {
       const listaDeItems = [...carrito, { item: itemNuevo, cantidad, talle }];
       setCarrito(listaDeItems);
-      console.log("LISTA:", listaDeItems);
+      // console.log("LISTA:", listaDeItems);
     } else {
       const nuevaCantidad = carrito[findPorId].cantidad + cantidad;
       const talles = [carrito[findPorId].talle, talle];
@@ -55,7 +54,6 @@ export const CartProvider = ({ children }) => {
   const totalAPagar = () => {
     let total = 0;
     carrito.forEach((item) => (total += item.item.precio * item.cantidad));
-    setTotalDeLaCompra(total);
     return total;
   };
 
@@ -72,7 +70,6 @@ export const CartProvider = ({ children }) => {
           carrito,
           addItem,
           removeItem,
-          totalDeLaCompra,
           totalAPagar,
           terminarCompra,
         }}

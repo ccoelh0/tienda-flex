@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../componentes-css/ItemDetail/ItemDetail.css";
+// import "../../componentes-css/ItemDetail/ItemDetail2.css";
 
 //Componentes
 import { ItemCount } from "./ItemCount";
@@ -42,19 +43,19 @@ export const ItemDetail = ({ item }) => {
             stock={item.stock}
             onAdd={onAdd}
           />
-        </div>
-        <div className="contenedor-tarjetas">
-          <div className="contenido-tarjetas">
-            <img src={Tarjetas} alt="tarjetas disponibles" />
-            <p>3 y 6 cuotas sin interes</p>
-          </div>
-          <div className="contenido-tarjetas">
-            <img src={Cambios} alt="cambios" />
-            <p>Cambios sin costo</p>
-          </div>
-          <div className="contenido-tarjetas">
-            <img src={Retiro} alt="cambios" />
-            <p>Retiro express por locales</p>
+          <div className="contenedor-tarjetas">
+            <div className="contenido-tarjetas">
+              <img src={Tarjetas} alt="tarjetas disponibles" />
+              <p>3 y 6 cuotas sin interes</p>
+            </div>
+            <div className="contenido-tarjetas">
+              <img src={Cambios} alt="cambios" />
+              <p>Cambios sin costo</p>
+            </div>
+            <div className="contenido-tarjetas">
+              <img src={Retiro} alt="cambios" />
+              <p>Retiro express por locales</p>
+            </div>
           </div>
         </div>
       </div>

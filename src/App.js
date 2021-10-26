@@ -8,6 +8,7 @@ import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "./componentes/ItemListDetails/ItemDetailContainer";
 import CarritoContainer from "./componentes/CarritoDeProductos/CarritoContainer";
 import Footer from "./componentes/Footer";
+import { FormDeCompra } from "./componentes/CarritoDeProductos/FormDeCompra";
 
 //Context
 import { CartProvider } from "./contexto/CartContext";
@@ -38,6 +39,10 @@ function App() {
 
           <Route exact path="/cart">
             <CarritoContainer />
+          </Route>
+
+          <Route exact path="/form">
+            <FormDeCompra />
           </Route>
         </Switch>
       </CartProvider>

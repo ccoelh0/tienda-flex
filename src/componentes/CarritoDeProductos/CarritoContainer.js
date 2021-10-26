@@ -4,8 +4,7 @@ import { cartContext } from "../../contexto/CartContext";
 import "../../componentes-css/carrito/CarritoContainer.css";
 
 const CarritoContainer = () => {
-  const { carrito, removeItem, totalAPagar, terminarCompra } =
-    React.useContext(cartContext);
+  const { carrito, removeItem, totalAPagar } = React.useContext(cartContext);
 
   return (
     <>
@@ -61,12 +60,11 @@ const CarritoContainer = () => {
           </table>
           <div className="carrito-terminarCompra">
             <span>Total: $ {totalAPagar()}</span>
-            <button
-              onClick={() => terminarCompra()}
-              className="boton botonNegroTerminarCompra"
-            >
-              Terminar compra
-            </button>
+            <Link to="/form">
+              <button className="boton botonNegroTerminarCompra">
+                Terminar compra
+              </button>
+            </Link>
           </div>
         </>
       ) : (
