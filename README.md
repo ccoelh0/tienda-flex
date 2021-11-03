@@ -15,10 +15,7 @@ Este proyecto fue desarrollado para el curso de React Js en Coderhouse.
 
 ## Diseño: 
 
-<img src="https://user-images.githubusercontent.com/77288330/140015908-c54900c1-9201-417d-9714-42b7f0055611.png" width="500">
-<img src="https://user-images.githubusercontent.com/77288330/140015876-87b1877e-265a-4a62-8c12-3ad5f649679a.png" width="500">
-<img src="https://user-images.githubusercontent.com/77288330/140015787-1179523c-5d10-42ec-b72a-32c4926375e6.png" width="500">
-<img src="https://user-images.githubusercontent.com/77288330/140015783-d282bdf5-fd4a-4e26-a9ff-6dd291b6e3a7.png" width="500">
+<img src="https://user-images.githubusercontent.com/77288330/140015908-c54900c1-9201-417d-9714-42b7f0055611.png" width="500"><img src="https://user-images.githubusercontent.com/77288330/140015876-87b1877e-265a-4a62-8c12-3ad5f649679a.png" width="500"><img src="https://user-images.githubusercontent.com/77288330/140015787-1179523c-5d10-42ec-b72a-32c4926375e6.png" width="500"><img src="https://user-images.githubusercontent.com/77288330/140015783-d282bdf5-fd4a-4e26-a9ff-6dd291b6e3a7.png" width="500">
 
 ## Responsive: 
 
