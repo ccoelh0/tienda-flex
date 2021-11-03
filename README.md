@@ -24,6 +24,7 @@ Este proyecto fue desarrollado para el curso de React Js en Coderhouse.
 
 ## Bibliotecas: 
 
+|  | |
 | ------ | ------ |
 | Firebase | Autenticación y base de datos |
 | Boostrap | Spinner |
