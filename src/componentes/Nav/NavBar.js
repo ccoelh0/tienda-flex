@@ -20,10 +20,10 @@ export default function Nav() {
   const { toggle } = state;
 
   return (
-    <>
+    <div className="gralNav">
       <div className="logo logoDesktop" alt="icono de FlatIcon">
         <Link to="/">
-          <h1>Tienda Flex</h1>
+          <h1>Flex</h1>
         </Link>
       </div>
       <header>
@@ -32,7 +32,7 @@ export default function Nav() {
         </div>
         <div className="logo logoMobile" alt="icono de FlatIcon">
           <Link to="/">
-            <h1>Tienda Flex</h1>
+            <h1>Flex</h1>
           </Link>
         </div>
         <nav>
@@ -82,11 +82,18 @@ export default function Nav() {
               />
             </li>
           </ul>
-          <NavLink to="/cart">
-            <CartWidget />
-          </NavLink>
+          <div className="widgetMobile">
+            <NavLink to="/cart">
+              <CartWidget />
+            </NavLink>
+          </div>
         </nav>
       </header>
-    </>
+      <div className="widgetDesktop">
+        <NavLink to="/cart">
+          <CartWidget />
+        </NavLink>
+      </div>
+    </div>
   );
 }

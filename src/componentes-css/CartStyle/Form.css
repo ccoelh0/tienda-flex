@@ -1,0 +1,195 @@
+#grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "form img"
+    "enviar error";
+}
+
+.formImg {
+  grid-area: img;
+  background-image: url("../../componentes-img/sneaker/mas/form.jpg");
+  height: 100%;
+  width: 80%;
+  align-self: flex-start;
+  background-size: cover;
+}
+
+form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botonEnviarForm {
+  width: 85%;
+  grid-area: enviar;
+  justify-self: end;
+}
+
+form .input {
+  align-self: flex-end;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 80%;
+  margin: 0 20px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form .input label {
+  margin-left: 10px;
+  font-weight: bolder;
+}
+
+form .input input,
+select {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  border: 1px solid rgba(184, 184, 184, 0.651);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.inputDoble {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "card code";
+}
+
+.card-number {
+  grid-area: card;
+}
+
+.card-code {
+  grid-area: code;
+}
+
+.mensajeCompraRealizada {
+  box-shadow: 2px 8px 20px #ddd;
+  transition: 0.5s linear;
+  width: 900px;
+  margin: 80px auto;
+  padding: 50px;
+}
+
+.mensajeCompraRealizada h3 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.mensajeCompraRealizada div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mensajeCompraRealizada div div {
+  margin: 10px;
+}
+
+.msjError {
+  grid-area: error;
+  width: 80%;
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.msjError span {
+  background-color: rgba(220, 20, 60, 0.829);
+  border: 2px solid red;
+  padding: 15px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.fadeIn {
+  opacity: 1;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+.fadeOut2 {
+  opacity: 1;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.fadeIn2 {
+  opacity: 0;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+@media only screen and (max-width: 913px) {
+  #grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "img"
+      "form"
+      "enviar";
+  }
+
+  .formImg {
+    grid-area: img;
+    background-image: url("../../componentes-img/sneaker/mas/form.jpg");
+    height: 300px;
+    width: 100%;
+    align-self: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 0;
+  }
+
+  .botonEnviarForm {
+    grid-area: enviar;
+    justify-self: center;
+  }
+
+  form .input {
+    align-self: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 80%;
+    margin: 0 20px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mensajeCompraRealizada {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .inputDoble {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "card" "code";
+  }
+
+  form .input input {
+    display: block;
+  }
+
+  .mensajeCompraRealizada {
+    width: 300px;
+  }
+}

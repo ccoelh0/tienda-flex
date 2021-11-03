@@ -1,10 +1,21 @@
-import React, { useState, createContext } from "react";
+import React, { useEffect, useState, createContext } from "react";
 
 //Context
 export const cartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem("Cart") !== null) {
+      setCarrito(JSON.parse(localStorage.getItem("Cart")));
+    }
+  }, []);
+
+  // Local Storage Set
+  useEffect(() => {
+    localStorage.setItem("Cart", JSON.stringify(carrito));
+  }, [carrito]);
 
   const addItem = (cantidad, talle, itemNuevo) => {
     //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
@@ -59,7 +70,6 @@ export const CartProvider = ({ children }) => {
 
   //Esta seria clear()
   const terminarCompra = () => {
-    alert("Gracias por tu compra!");
     setCarrito([]);
   };
 

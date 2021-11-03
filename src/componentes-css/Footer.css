@@ -1,156 +1,39 @@
-.container-fluid {
-  padding: 0;
-  margin: 0;
-}
-
-.footer-padre {
-  /* background: rgb(4, 67, 178);
-  background: linear-gradient(
-    142deg,
-    rgba(4, 67, 178, 1) 0%,
-    rgba(28, 45, 115, 1) 77%,
-    rgba(20, 30, 48, 1) 100%
-  ); */
-  background-color: #1b1f23;
-  color: white;
-  padding-top: 40px;
-  margin-top: 40px;
-}
-
 .footer {
+  margin: 40px 0 0;
+  padding: 40px 0;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  text-align: left;
-}
-
-.footer-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-ul li {
-  color: white;
-  font-size: 18px;
-  transition: transform 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-}
-
-.footer-ul li:hover {
-  transform: translateX(4px);
-  color: white;
-}
-
-.footer-titulo {
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.footer-logos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: end;
-  cursor: pointer;
-}
-
-.footer-logos p {
-  margin: 10px 0 0 0;
-}
-
-.footer-logos-redes {
-  display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  margin-left: 10px;
 }
 
-.footer-logos-redes img {
-  margin-left: 20px;
+.footer .redes {
+  display: flex;
 }
 
-.footer-logos h4 {
-  font-size: 30px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.footer-logos h5 {
-  font-size: 20px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.footer-derechos {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: white;
-}
-
-.footer-derechos h4 {
-  font-size: 16px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.footer-derechos h4 a {
-  text-decoration: none;
-  color: black;
-}
-
-.footer-logos-celular {
-  display: none;
-  /* margin-bottom: 40px; */
-}
-
-.footer-logos-celular-redes img {
+.footer .redes img {
+  width: 40px;
   margin: 20px 10px;
+  cursor: pointer;
 }
 
-.footer-logos-celular h4 {
-  font-size: 25px;
-  margin: 10px;
+.footer .links {
+  display: flex;
 }
 
-.footer-logos-celular h5 {
-  font-size: 16px;
-  margin: 10px;
-}
-
-.footer-logos-celular h5 a {
+.footer .links a {
   text-decoration: none;
-  color: white;
+  margin: 10px 10px;
 }
 
-@media only screen and (max-width: 767px) {
-  .footer-padre {
-    background: black;
-    /* background: linear-gradient(
-      142deg,
-      rgba(4, 67, 178, 1) 0%,
-      rgba(28, 45, 115, 1) 77%,
-      rgba(20, 30, 48, 1) 100%
-    ); */
-    color: white;
-    padding: 40px 0px;
-    margin-top: 40px;
-  }
+.footer .links span {
+  color: white;
+  cursor: pointer;
+}
 
-  .footer-ul {
-    display: none;
-  }
-
-  .footer-logos-redes {
-    display: none;
-  }
-
-  .footer-logos-celular {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* margin-bottom: 40px; */
-  }
+.footer .derechos {
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
 }

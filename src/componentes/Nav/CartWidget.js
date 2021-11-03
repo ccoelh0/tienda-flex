@@ -1,5 +1,5 @@
 import React from "react";
-import CartIcon from "../../componentes-img/cart-plus-solid.svg";
+import CartIcon from "../../componentes-img/logos/shopping-cart.png";
 import { cartContext } from "../../contexto/CartContext";
 
 export default function CartWidget() {

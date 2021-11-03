@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //COMPONENTES
 import NavBar from "./componentes/Nav/NavBar";
-import { PresentacionDelIndex } from "./componentes/IndexPresentacion/PresentacionDelIndex";
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./componentes/ItemListDetails/ItemDetailContainer";
-import CarritoContainer from "./componentes/CarritoDeProductos/CarritoContainer";
-import Footer from "./componentes/Footer";
-import { FormDeCompra } from "./componentes/CarritoDeProductos/FormDeCompra";
+import { PresentacionDelIndex } from "./componentes/Home/PresentacionDelIndex";
+import ItemListContainer from "./componentes/ItemList/ItemListContainer";
+import ItemDetailContainer from "./componentes/ItemDetails/ItemDetailContainer";
+import CarritoContainer from "./componentes/Cart/CarritoContainer";
+import Footer from "./componentes/Footer/Footer";
+import { FormDeCompra } from "./componentes/Cart/FormDeCompra";
 
 //Context
 import { CartProvider } from "./contexto/CartContext";

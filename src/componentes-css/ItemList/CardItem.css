@@ -1,0 +1,83 @@
+.containerGralProd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 50px 20px;
+}
+
+.container-itemCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15px;
+  box-shadow: 2px 8px 20px #ddd;
+  transition: 0.5s linear;
+}
+
+.itemCard-img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.itemCard-containerDetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+}
+
+.itemCard-containerDetails h3 {
+  padding: 10px 5px 2px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.itemCard-containerDetails span {
+  margin: 5px;
+}
+
+.itemCard-containerDetails p {
+  margin: 0;
+}
+
+.itemCard-containerDetails a {
+  text-decoration: none;
+}
+
+.itemCard-containerDetails button {
+  display: block;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 5px 10px;
+  text-decoration: none !important;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.itemCard-containerDetails button:active {
+  position: relative;
+  top: 1px;
+}
+
+.mensajeSinStock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensajeSinStock h3 {
+  font-size: 45px;
+  letter-spacing: -1px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
