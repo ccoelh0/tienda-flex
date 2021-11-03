@@ -1,16 +1,36 @@
-Proyecto React - Tienda Flex 
+# React Proyect
+## _Tienda Flex_
 
-El proyecto de react Tienda Flex esta pensando para un local que venda zapatillas. 
-La funcionalidad de este proyecto esta dividido (por el momento) en 3 secciones: 
+Este proyecto fue desarrollado para el curso de React Js en Coderhouse.
 
-1. App => En este componente se declaran todas las rutas y se acomodan como deben aparecer los componentes
+## Funcionalidad:
 
-2. ItemList => Esta seccion tiene distintos componentes, entre ellos: 
-*ItemListContainer: encargado de obtener los datos del JSON productos, filtrar los productos por su categoria y pasarlos a ItemList
-*ItemList: se encarga de mapear la props que le pasa ItemListContainer
-*Item: recupera y visualiza los datos que se traen del JSON. Ademas agrega un <Link> para que cuando el usuario haga click lo lleve a los detalles especificos del producto (esta ruta se especifico en App)
-  
-3. ItemDetail:
-*ItemDetailContainer: trae el JSON productos y lo filtra por su id. El resultado lo guarda en un State y lo pasa por props a ItemDetail
-*ItemDetail: Muestra los valores de los productos seleccionados en Item
+> En este trabajo se utilizó ReactJs
+> para simular la funcionalidad de un ecommerce.
+> El mismo cuenta con una lista de productos
+> traida de firebase y también
+> con un carrito de productos.
+> Por último, cuando el usuario finaliza 
+> la compra, los datos de esta se guardan en firebase.
 
+## Responsive: 
+
+## Bibliotecas utilizadas:
+
+- Firebase  || Autenticación y base de datos
+- Boostrap || Spinner
+- React Router || Router
+
+## Instalacion: 
+
+```sh
+Download zip
+npm install
+npm start
+```
+
+## Autor: 
+```sh
+Agustin Coelho || https://www.linkedin.com/in/agustin-coelho-2a5767175/ 
+Mail || coelhoagustin1@gmail.com
+```
