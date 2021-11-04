@@ -42,6 +42,7 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 .t-talles span {
@@ -132,6 +133,10 @@ th {
     width: 50px;
   }
 
+  .t-talles {
+    flex-direction: column;
+  }
+
   .botonRojo {
     width: 50%;
     background-color: crimson;
@@ -142,6 +147,10 @@ th {
 }
 
 @media only screen and (max-width: 500px) {
+  table {
+    width: 100%;
+  }
+
   .trContenido {
     padding: 10px;
     display: grid;
@@ -157,7 +166,7 @@ th {
   }
 
   .t-img img {
-    width: 30px;
+    width: 40px;
   }
 
   .botonRojo {
@@ -182,12 +191,16 @@ th {
     margin: 2px;
   }
 
+  .t-precio span {
+    font-size: 16px;
+  }
+
   .botonRojo {
     width: 90%;
     font-size: 10px;
   }
 
   .t-cantidad {
-    font-size: 10px;
+    font-size: 16px;
   }
 }

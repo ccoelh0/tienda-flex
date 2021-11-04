@@ -134,19 +134,17 @@ select {
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas:
-      "img"
       "form"
-      "enviar";
+      "enviar"
+      "error";
+  }
+
+  .msjError {
+    justify-self: center;
   }
 
   .formImg {
-    grid-area: img;
-    background-image: url("../../componentes-img/sneaker/mas/form.jpg");
-    height: 300px;
-    width: 100%;
-    align-self: center;
-    background-size: cover;
-    background-attachment: fixed;
+    display: none;
   }
 
   form {
@@ -175,6 +173,10 @@ select {
 
   .mensajeCompraRealizada {
     width: 450px;
+  }
+
+  .mensajeCompraRealizada h3 {
+    font-size: 18px;
   }
 }
 

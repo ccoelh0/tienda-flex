@@ -50,12 +50,15 @@
   color: #000000;
   font-size: 35px;
   text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 .detalles-titulo h3 {
   color: #7b7f85;
   font-size: 30px;
   font-weight: 600;
+  text-align: left;
+  margin: 0;
 }
 
 .contenedor-talle {
@@ -69,6 +72,10 @@
   padding-right: 15px;
   font-size: 20px;
   margin-bottom: 5px;
+}
+
+.contenedor-talle div select {
+  width: 100%;
 }
 
 .contenedor-botones {
@@ -211,7 +218,13 @@
   }
 
   .contenedor-talle p {
+    padding-right: 0px;
     font-size: 20px;
+  }
+
+  .contenedor-talle div select {
+    width: 200px;
+    height: 50px;
   }
 
   .contenedor-botones {
@@ -265,6 +278,10 @@
     align-items: center;
     margin: 20px 0;
     justify-content: space-evenly;
+  }
+
+  .contenedor-talle div select {
+    height: 50px;
   }
 
   .contenedor-botones {

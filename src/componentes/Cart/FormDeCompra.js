@@ -126,7 +126,7 @@ export const FormDeCompra = () => {
               textAlign: "center",
               textTransform: "uppercase",
               fontWeight: 800,
-              margin: "80px 0px",
+              margin: "60px 10px",
             }}
           >
             sneakers are almost yours!
