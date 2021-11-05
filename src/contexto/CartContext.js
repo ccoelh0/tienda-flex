@@ -29,7 +29,6 @@ export const CartProvider = ({ children }) => {
     if (findPorId === -1) {
       const listaDeItems = [...carrito, { item: itemNuevo, cantidad, talle }];
       setCarrito(listaDeItems);
-      // console.log("LISTA:", listaDeItems);
     } else {
       const nuevaCantidad = carrito[findPorId].cantidad + cantidad;
       const talles = [carrito[findPorId].talle, talle];
@@ -50,8 +49,6 @@ export const CartProvider = ({ children }) => {
       ];
       setCarrito(listaDeItems);
     }
-    // console.log("este es el item", itemNuevo);
-    // console.log("este es el carrito", carrito);
   };
 
   const removeItem = (item) => {
@@ -68,7 +65,6 @@ export const CartProvider = ({ children }) => {
     return total;
   };
 
-  //Esta seria clear()
   const terminarCompra = () => {
     setCarrito([]);
   };

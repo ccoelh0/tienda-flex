@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../componentes-css/Footer.css";
+import "../../componentes-css/Footer/Footer.css";
 
 //Logos
 import Ig from "../../componentes-img/logos/ig.png";
