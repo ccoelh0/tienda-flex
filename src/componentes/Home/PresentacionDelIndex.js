@@ -3,13 +3,13 @@ import "../../componentes-css/Productos.css";
 
 //Imagenes Jordan
 import NikeLogo from "../../componentes-img/logos/nike.png";
-import Nike4 from "../../componentes-img/sneaker/home/home4.jfif";
-import Nike6 from "../../componentes-img/sneaker/home/home6.jfif";
+import Nike4 from "../../componentes-img/sneaker/home/home4.png";
+import Nike6 from "../../componentes-img/sneaker/home/home6.png";
 
 //Imagenes Yeezy
 import AdidasLogo from "../../componentes-img/logos/adidas.png";
-import Yeezy1 from "../../componentes-img/sneaker/yeezy/1.jfif";
-import Yeezy2 from "../../componentes-img/sneaker/yeezy/2.jfif";
+import Yeezy1 from "../../componentes-img/sneaker/yeezy/1.png";
+import Yeezy2 from "../../componentes-img/sneaker/yeezy/2.png";
 
 import { BotonNegro } from "../Button/BotonNegro";
 

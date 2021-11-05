@@ -7,7 +7,7 @@
 }
 
 .portada {
-  background: url("../componentes-img/sneaker/mas/jordan1turquesa.jpg");
+  background: url("../componentes-img/sneaker/mas/jordan1turquesa.png");
   width: 100%;
   height: 600px;
   background-size: cover;
@@ -28,6 +28,7 @@
   font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .portada .portada-detalles p {
@@ -35,6 +36,7 @@
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 10px 0 20px;
 }
 
 .titulo {
@@ -56,8 +58,8 @@ h3 {
 .productos {
   margin: 20px 60px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-areas: "texto img1 img2";
+  grid-template-columns: 2% 30% 3% 30% 3% 30% 2%;
+  grid-template-areas: ". texto . img1 . img2 .";
   align-items: center;
   justify-items: center;
 }
@@ -74,8 +76,8 @@ h3 {
 .productos2 {
   margin: 20px 60px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-areas: "img3 img4 texto2";
+  grid-template-columns: 2% 30% 3% 30% 3% 30% 2%;
+  grid-template-areas: ". img3 . img4 . texto2 .";
   justify-items: center;
   align-items: center;
 }
@@ -108,10 +110,15 @@ h3 {
   font-size: 30px;
   text-transform: uppercase;
   font-weight: bolder;
+  margin: 0;
 }
 
 .home-flex img {
   margin: 0 auto;
+}
+
+.home-flex p {
+  margin: 10px 0 25px;
 }
 
 .home-flex2 {
@@ -126,6 +133,11 @@ h3 {
   font-size: 30px;
   text-transform: uppercase;
   font-weight: bolder;
+  margin: 0;
+}
+
+.home-flex2 p {
+  margin: 10px 0 25px;
 }
 
 .home-flex2 img {

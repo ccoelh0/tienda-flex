@@ -29,9 +29,10 @@
 }
 
 .itemCard-containerDetails h3 {
-  padding: 10px 5px 2px;
+  margin: 10px 0;
   font-size: 20px;
   text-transform: capitalize;
+  font-weight: 600;
 }
 
 .itemCard-containerDetails span {

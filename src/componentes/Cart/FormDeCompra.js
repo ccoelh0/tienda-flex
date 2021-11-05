@@ -75,23 +75,7 @@ export const FormDeCompra = () => {
         console.error(error);
       });
 
-    //Actualizacion Stock de a un producto a la vez => FUNCIONA
-    // const idProductoElegido = carrito.map((item) => {
-    //   return item.item.id;
-    // });
-    // const cantidadElegidaProd = carrito.map((item) => item.cantidad);
-    // const stockProd = carrito.map((item) => item.item.stock);
-    // const nuevoStock = stockProd - cantidadElegidaProd;
-    // console.log(nuevoStock);
-
-    // const productos = getFirestore();
-    // const actualizarProductos = productos
-    //   .collection("items")
-    //   .doc(`${idProductoElegido}`);
-    // actualizarProductos.update({ stock: nuevoStock });
-
     //ACTUALIZACION VARIOS
-
     const db = getFirestore();
     const ItemsCollection = db.collection("items");
     const batch = getFirestore().batch();
@@ -127,6 +111,7 @@ export const FormDeCompra = () => {
               textTransform: "uppercase",
               fontWeight: 800,
               margin: "60px 10px",
+              fontSize: "45px",
             }}
           >
             sneakers are almost yours!
@@ -229,7 +214,7 @@ export const FormDeCompra = () => {
               >
                 <label>Choose amount of payments:</label>
                 <select
-                  style={{ width: "40%" }}
+                  className="cuotas"
                   onChange={(e) => {
                     const cuotaSeleccionada = e.target.value;
                     setCuota(cuotaSeleccionada);

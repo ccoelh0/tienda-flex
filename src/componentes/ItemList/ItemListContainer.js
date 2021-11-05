@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "../../componentes-css/Productos.css";
 import { getFirestore } from "../../firebase/firebaseConfig";
-import { Spinner } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 
 //Componentes
 import { ItemList } from "./ItemList";
@@ -23,7 +23,6 @@ const ItemListContainer = () => {
           if (informacionBaseDatos.size === 0) {
             console.log("No Hay resultados");
           }
-          // console.log("documentos: ", informacionBaseDatos.docs);
           setLoading(false);
           const productos = informacionBaseDatos.docs.map((doc) => {
             return { id: doc.id, ...doc.data() };

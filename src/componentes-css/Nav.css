@@ -2,7 +2,7 @@
 
 .gralNav {
   display: flex;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   justify-content: space-around;
   align-items: center;
   background: rgb(255, 255, 255);
@@ -33,7 +33,7 @@ header {
 }
 
 .logo h1 {
-  /* margin: 40px 0 20px; */
+  margin: 15px 0;
   font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
@@ -102,7 +102,7 @@ nav ul li .botonNavBar {
 }
 .nav-cart span {
   position: absolute;
-  top: -13px;
+  top: -11px;
   right: -15px;
   background: #0146bc;
   font-size: 12px;

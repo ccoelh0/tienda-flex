@@ -28,7 +28,6 @@ const ItemDetailContainer = () => {
             setSinStock("block");
             setStock("none");
           }
-          // console.log("data: ", data.data());
           const detalle = data.data();
           setProductoDetalle(detalle);
         })

@@ -50,7 +50,7 @@
   color: #000000;
   font-size: 35px;
   text-transform: uppercase;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 
 .detalles-titulo h3 {
@@ -76,6 +76,9 @@
 
 .contenedor-talle div select {
   width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 .contenedor-botones {
@@ -151,6 +154,7 @@
   color: #7b7f85;
   margin-bottom: 20px;
   text-transform: uppercase;
+  margin: 0 0 20px;
 }
 
 .contenedor-agregado .agregado-boton {
