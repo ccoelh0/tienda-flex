@@ -1,6 +1,6 @@
 import React from "react";
 import { Item } from "./Item";
-import "../../componentes-css/ItemList/CardItem.css";
+import "../../componentes-css/ItemList/cardItem.css";
 import { BotonNegro } from "../Button/BotonNegro";
 
 export const ItemList = ({ items }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../componentes-css/Productos.css";
+import "../../componentes-css/Index/productos.css";
 
 //Imagenes Jordan
 import NikeLogo from "../../componentes-img/logos/nike.png";

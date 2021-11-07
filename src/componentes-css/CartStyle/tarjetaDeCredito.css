@@ -1,0 +1,50 @@
+#PaymentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.rccs {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.tarjetasForm {
+  width: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "number name"
+    "expiry cvc";
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.name {
+  grid-area: name;
+}
+.number {
+  grid-area: number;
+  margin-right: 10px;
+}
+.expiry {
+  grid-area: expiry;
+  margin-right: 10px;
+}
+.cvc {
+  grid-area: cvc;
+}
+
+.tarjetasForm div {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+@media only screen and (max-width: 500px) {
+  .tarjetasForm {
+    grid-template-columns: 100%;
+    grid-template-areas: "number" "name" "expiry" "cvc";
+  }
+}

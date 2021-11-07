@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BotonNegro } from "../Button/BotonNegro";
-import "../../componentes-css/ItemList/CardItem.css";
+import "../../componentes-css/ItemList/cardItem.css";
 
 export const Item = ({ item }) => {
   const { id, nombre, precio, imgUrl, stock } = item;

@@ -1,41 +1,46 @@
 #grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-areas:
-    "form img"
-    "enviar error";
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  grid-template-areas: "form img";
+  box-shadow: 0px 0px 26px 5px rgba(210, 210, 210, 0.88);
+  border: 1px solid #ddd;
 }
 
 .formImg {
   grid-area: img;
   background-image: url("../../componentes-img/sneaker/mas/form.png");
   height: 100%;
-  width: 80%;
-  align-self: flex-start;
+  width: 100%;
+  align-self: center;
   background-size: cover;
 }
 
 form {
   grid-area: form;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: end;
+  padding: 20px 0;
 }
 
 .botonEnviarForm {
-  width: 85%;
-  grid-area: enviar;
-  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 form .input {
   align-self: flex-end;
-  border: 1px solid #ddd;
-  padding: 20px;
+  padding: 5px 0;
   width: 80%;
-  margin: 0 20px 0 40px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,23 +106,13 @@ select {
   margin: 10px;
 }
 
-.msjError {
-  grid-area: error;
-  width: 80%;
-  display: flex;
-  margin-top: 35px;
-  justify-content: center;
-  align-items: center;
-}
-
-.msjError span {
-  background-color: rgba(220, 20, 60, 0.829);
-  border: 2px solid red;
-  padding: 15px 20px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 16px;
+.alert {
+  position: fixed;
+  width: 25%;
+  text-align: center;
+  top: 20%;
+  left: 40%;
+  z-index: 5;
 }
 
 .fadeOut {
@@ -183,20 +178,12 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 0 0;
-  }
-
-  .botonEnviarForm {
-    grid-area: enviar;
-    justify-self: center;
+    margin: 20px 0;
   }
 
   form .input {
     align-self: center;
-    border: 1px solid #ddd;
     padding: 20px;
-    width: 80%;
-    margin: 0 20px 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -208,6 +195,11 @@ select {
 
   .mensajeCompraRealizada h3 {
     font-size: 18px;
+  }
+
+  .alert {
+    width: 50%;
+    left: 25%;
   }
 }
 
@@ -235,5 +227,16 @@ select {
     /* height: 45px; */
     padding: 10px 0;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #grid {
+    width: 95%;
+  }
+
+  form .input {
+    margin: 0;
+    padding: 10px 0;
   }
 }

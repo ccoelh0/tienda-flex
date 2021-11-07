@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { getFirestore } from "../../firebase/firebaseConfig";
 import { cartContext } from "../../contexto/CartContext";
-import "../../componentes-css/CartStyle/Form.css";
+import "../../componentes-css/CartStyle/form.css";
 import { BotonNegro } from "../Button/BotonNegro";
+import TarjetaDeCredito from "./TarjetaDeCredito";
+import { Alert } from "react-bootstrap";
 
 export const FormDeCompra = () => {
   const { carrito, totalAPagar, terminarCompra } =
@@ -10,15 +12,18 @@ export const FormDeCompra = () => {
 
   const [compraFinalizada, setCompraFinalizada] = useState("none");
   const [compraNoFinalizada, setNoCompraFinalizada] = useState("block");
-
+  const [msjError, setMsjError] = useState("none");
   const [nombre, setNombre] = useState("");
-  const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [emailRepeat, setEmailRepeat] = useState("");
   const [direction, setDirection] = useState("");
-  const [card, setCard] = useState("");
-  const [code, setCode] = useState("");
   const [cuota, setCuota] = useState("");
+
+  //States para el componente de tarjeta:
+  const [cvc, setCVC] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
   //id de la compra autogenerado por firebase
   const [idCompra, setIdCompra] = useState("");
@@ -26,79 +31,87 @@ export const FormDeCompra = () => {
 
   const finalizarCompra = (ev) => {
     ev.preventDefault();
+    if (
+      nombre !== "" &&
+      email === emailRepeat &&
+      direction !== "" &&
+      cuota !== "" &&
+      cvc !== "" &&
+      expiry !== "" &&
+      name !== "" &&
+      number !== ""
+    ) {
+      //toLocaleString nos transcribe el dato de Date
+      const fechaDeLaCompra = new Date();
+      const total = totalAPagar();
 
-    //toLocaleString nos transcribe el dato de Date
-    const fechaDeLaCompra = new Date();
-    const total = totalAPagar();
+      const nuevaOrden = {
+        buyer: {
+          email: email,
+          emailRepeat: emailRepeat,
+          nombre: nombre,
+          direction: direction,
+          cantidadDeCoutas: cuota,
+          codigoTarjeta: number,
+          codigoDeSeguridad: cvc,
+        },
+        items: {
+          carrito: [...carrito],
+        },
+        fechaDeCompra: {
+          fecha: fechaDeLaCompra.toLocaleString(),
+        },
+        total: {
+          total: total,
+        },
+      };
 
-    const nuevaOrden = {
-      buyer: {
-        email: email,
-        emailRepeat: emailRepeat,
-        nombre: nombre,
-        number: number,
-        direction: direction,
-        cantidadDeCoutas: cuota,
-        codigoTarjeta: card,
-        codigoDeSeguridad: code,
-      },
-      items: {
-        carrito: [...carrito],
-      },
-      fechaDeCompra: {
-        fecha: fechaDeLaCompra.toLocaleString(),
-      },
-      total: {
-        total: total,
-      },
-    };
+      const ordenesData = getFirestore();
+      const ordenes = ordenesData.collection("compra");
 
-    const ordenesData = getFirestore();
-    const ordenes = ordenesData.collection("compra");
+      ordenes
+        .add(nuevaOrden)
+        .then(({ id }) => {
+          setIdCompra(id);
+          setEmail("");
+          setEmailRepeat("");
+          setNombre("");
+          setDirection("");
+          setName("");
+          setNumber("");
+          setCVC("");
+          setExpiry("");
+          setCuota("");
+          setCompraFinalizada("block");
+          setNoCompraFinalizada("none");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
 
-    ordenes
-      .add(nuevaOrden)
-      .then(({ id }) => {
-        setIdCompra(id);
-        setEmail("");
-        setEmailRepeat("");
-        setNombre("");
-        setDirection("");
-        setNumber("");
-        setCard("");
-        setCode("");
-        setCuota("");
-        setCompraFinalizada("block");
-        setNoCompraFinalizada("none");
-      })
-      .catch((error) => {
-        console.error(error);
+      //ACTUALIZACION VARIOS
+      const db = getFirestore();
+      const ItemsCollection = db.collection("items");
+      const batch = getFirestore().batch();
+
+      carrito.forEach((c) => {
+        batch.update(ItemsCollection.doc(`${c.item.id}`), {
+          stock: c.item.stock - c.cantidad,
+        });
       });
-
-    //ACTUALIZACION VARIOS
-    const db = getFirestore();
-    const ItemsCollection = db.collection("items");
-    const batch = getFirestore().batch();
-
-    carrito.forEach((c) => {
-      batch.update(ItemsCollection.doc(`${c.item.id}`), {
-        stock: c.item.stock - c.cantidad,
-      });
-    });
-    batch
-      .commit()
-      .then(() => {
-        console.log("Termino bien");
-        terminarCompra();
-      })
-      .catch((err) => console.log(err));
-  };
-
-  const [msjError, setMsjError] = useState(false);
-
-  const completarDatos = (ev) => {
-    ev.preventDefault();
-    setMsjError(true);
+      batch
+        .commit()
+        .then(() => {
+          console.log("Termino bien");
+          terminarCompra();
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setMsjError("block");
+      setTimeout(() => {
+        setMsjError("none");
+      }, 3000);
+    }
   };
 
   return (
@@ -116,6 +129,9 @@ export const FormDeCompra = () => {
           >
             sneakers are almost yours!
           </h1>
+          <div style={{ display: msjError }} className="alert">
+            <Alert variant="danger">Check the data!</Alert>
+          </div>
           <div id="grid">
             <div className="formImg"></div>
             <form>
@@ -124,27 +140,18 @@ export const FormDeCompra = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder=" Enter your name"
+                  placeholder=" JOHN DOE"
                   value={nombre}
                   onChange={(evento) => setNombre(evento.target.value)}
                 />
               </div>
-              <div className="input">
-                <label htmlFor="number">Number:</label>
-                <input
-                  type="number"
-                  name="number"
-                  placeholder=" Enter your number"
-                  value={number}
-                  onChange={(evento) => setNumber(evento.target.value)}
-                />
-              </div>
+
               <div className="input">
                 <label htmlFor="direction">Direction:</label>
                 <input
                   type="text"
                   name="direction"
-                  placeholder=" Enter your direction"
+                  placeholder=" STREET 123"
                   value={direction}
                   onChange={(evento) => setDirection(evento.target.value)}
                 />
@@ -154,7 +161,7 @@ export const FormDeCompra = () => {
                 <input
                   type="text"
                   name="email"
-                  placeholder=" Enter your email"
+                  placeholder=" email@example.com"
                   value={email}
                   onChange={(evento) => setEmail(evento.target.value)}
                 />
@@ -164,44 +171,22 @@ export const FormDeCompra = () => {
                 <input
                   type="text"
                   name="emailRepeat"
-                  placeholder=" Enter your email"
+                  placeholder=" email@example.com"
                   value={emailRepeat}
                   onChange={(evento) => setEmailRepeat(evento.target.value)}
                 />
               </div>
               <div className="input">
-                <div className="inputDoble">
-                  <div style={{ padding: "5px" }} className="card-number">
-                    <label htmlFor="card" style={{ marginLeft: "10px" }}>
-                      Card number:
-                    </label>
-                    <input
-                      type="number"
-                      name="card"
-                      placeholder=" Card number"
-                      value={card}
-                      onChange={(evento) => {
-                        const codigo = evento.target.value.slice(0, 16);
-                        setCard(codigo);
-                      }}
-                    />
-                  </div>
-                  <div style={{ padding: "5px" }} className="card-code">
-                    <label htmlFor="code" style={{ marginLeft: "10px" }}>
-                      Security code:
-                    </label>
-                    <input
-                      type="password"
-                      name="code"
-                      placeholder=" Code"
-                      value={code}
-                      onChange={(evento) => {
-                        const codigo = evento.target.value.slice(0, 3);
-                        setCode(codigo);
-                      }}
-                    />
-                  </div>
-                </div>
+                <TarjetaDeCredito
+                  name={name}
+                  setName={setName}
+                  number={number}
+                  setNumber={setNumber}
+                  expiry={expiry}
+                  setExpiry={setExpiry}
+                  cvc={cvc}
+                  setCVC={setCVC}
+                />
               </div>
               <div
                 className="input"
@@ -220,7 +205,7 @@ export const FormDeCompra = () => {
                     setCuota(cuotaSeleccionada);
                   }}
                 >
-                  <option value={""}>Choose</option>
+                  <option>Choose</option>
                   {cuotas.map((c) => (
                     <option key={`key-${c}`} value={c}>
                       {c}
@@ -228,66 +213,20 @@ export const FormDeCompra = () => {
                   ))}
                 </select>
               </div>
-            </form>
-            <div
-              className="botonEnviarForm"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              {nombre !== "" &&
-              number !== "" &&
-              email === emailRepeat &&
-              direction !== "" &&
-              card !== "" &&
-              code !== "" &&
-              cuota !== "" ? (
+              <div className="botonEnviarForm">
                 <input
                   type="submit"
                   value="Sent"
                   className="boton botonNegroTerminarCompra"
                   onClick={finalizarCompra}
-                  style={{ marginTop: "40px", height: "50px" }}
+                  style={{ height: "50px" }}
                 />
-              ) : (
-                <>
-                  <input
-                    type="submit"
-                    value="Sent"
-                    className="boton botonNegroTerminarCompra"
-                    onClick={completarDatos}
-                    style={{ marginTop: "40px", height: "50px" }}
-                  />
-                </>
-              )}
-            </div>
-            {nombre !== "" &&
-            number !== "" &&
-            email === emailRepeat &&
-            direction !== "" &&
-            card !== "" &&
-            code !== "" &&
-            cuota !== "" ? (
-              <div
-                className={`msjError ${
-                  msjError === false ? "fadeOut2" : "fadeIn2"
-                }`}
-              >
-                <span>check the data please</span>
               </div>
-            ) : (
-              <div
-                className={`msjError ${
-                  msjError === false ? "fadeOut" : "fadeIn"
-                }`}
-              >
-                <span>check the data please</span>
-              </div>
-            )}
+            </form>
           </div>
         </div>
       </div>
+
       <div
         className="mensajeCompraRealizada"
         style={{

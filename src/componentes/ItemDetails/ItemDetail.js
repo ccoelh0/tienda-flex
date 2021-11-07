@@ -1,5 +1,5 @@
 import React from "react";
-import "../../componentes-css/ItemDetail/ItemDetail.css";
+import "../../componentes-css/ItemDetail/itemDetail.css";
 
 //Componentes
 import { ItemCount } from "./ItemCount";

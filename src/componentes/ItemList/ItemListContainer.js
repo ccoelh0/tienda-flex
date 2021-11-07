@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import "../../componentes-css/Productos.css";
+import "../../componentes-css/Index/productos.css";
 import { getFirestore } from "../../firebase/firebaseConfig";
 import Spinner from "react-bootstrap/Spinner";
 
