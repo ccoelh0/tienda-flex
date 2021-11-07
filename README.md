@@ -27,6 +27,7 @@ Este proyecto fue desarrollado para el curso de React Js en Coderhouse.
 | Biblioteca | Funcionalidad |
 | ------ | ------ |
 | Firebase | Autenticación y base de datos |
+| React Credit Card | Estilos de la tarjeta de credito |
 | Boostrap | Spinner |
 | React Router | Router |
 
