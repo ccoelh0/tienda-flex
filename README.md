@@ -15,7 +15,6 @@ Este proyecto fue desarrollado para el curso de React Js en Coderhouse.
 
 ## Proyecto online:
 
-https://codesandbox.io/s/github/ccoelh0/proyecto-react
 
 ## Diseño: 
 
