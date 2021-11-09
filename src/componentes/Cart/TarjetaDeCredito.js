@@ -6,11 +6,8 @@ import "../../componentes-css/CartStyle/tarjetaDeCredito.css";
 const TarjetaDeCredito = (props) => {
   const { name, setName, number, setNumber, cvc, setCVC, expiry, setExpiry } =
     props;
+
   const [focus, setFocus] = useState("");
-  //   const [cvc, setCVC] = useState("");
-  //   const [expiry, setExpiry] = useState("");
-  //   const [name, setName] = useState("");
-  //   const [number, setNumber] = useState("");
 
   const handleInputFocus = (e) => {
     setFocus(e.target.name);

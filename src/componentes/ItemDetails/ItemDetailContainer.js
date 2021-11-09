@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { getFirestore } from "../../firebase/firebaseConfig";
-
-//Componentes
 import { ItemDetail } from "./ItemDetail";
 import { BotonNegro } from "../Button/BotonNegro";
 
@@ -22,7 +20,7 @@ const ItemDetailContainer = () => {
         .get()
         .then((data) => {
           if (data.size === 0) {
-            console.log("No hay resulatdos");
+            console.log("No hay resultados");
           }
           if (data.data() === undefined) {
             setSinStock("block");

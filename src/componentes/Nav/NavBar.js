@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../componentes-css/Navbar/nav.css";
-
-//Import components
 import CartWidget from "./CartWidget";
-
-//Importo imagenes
-import Menu from "../../componentes-img/bars-solid.svg";
+import Menu from "../../componentes-img/logos/menu.png";
 import Close from "../../componentes-img/times-solid.svg";
 
 export default function Nav() {
-  //Menu togle
   const [state, setState] = useState({ toggle: false });
 
   function menuToggle() {

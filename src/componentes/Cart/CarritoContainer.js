@@ -1,7 +1,6 @@
 import React from "react";
 import { cartContext } from "../../contexto/CartContext";
 import "../../componentes-css/CartStyle/carritoContainer.css";
-
 import { BotonNegro } from "../Button/BotonNegro";
 
 const CarritoContainer = () => {

@@ -47,4 +47,8 @@
     grid-template-columns: 100%;
     grid-template-areas: "number" "name" "expiry" "cvc";
   }
+
+  .rccs__card {
+    width: 100%;
+  }
 }

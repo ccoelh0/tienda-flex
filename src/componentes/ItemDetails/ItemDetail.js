@@ -1,15 +1,13 @@
 import React from "react";
 import "../../componentes-css/ItemDetail/itemDetail.css";
-
-//Componentes
 import { ItemCount } from "./ItemCount";
 
-//Imagenes
+//IMAGENES
 import Cambios from "../../componentes-img/logos/cambios.png";
 import Tarjetas from "../../componentes-img/logos/tarjetas.png";
 import Retiro from "../../componentes-img/logos/retiro.png";
 
-//Context
+//CONTEXT
 import { cartContext } from "../../contexto/CartContext";
 
 export const ItemDetail = ({ item }) => {

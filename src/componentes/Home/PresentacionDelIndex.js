@@ -1,12 +1,10 @@
 import React from "react";
 import "../../componentes-css/Index/productos.css";
 
-//Imagenes Jordan
+//IMAGENES
 import NikeLogo from "../../componentes-img/logos/nike.png";
 import Nike4 from "../../componentes-img/sneaker/home/home4.png";
 import Nike6 from "../../componentes-img/sneaker/home/home6.png";
-
-//Imagenes Yeezy
 import AdidasLogo from "../../componentes-img/logos/adidas.png";
 import Yeezy1 from "../../componentes-img/sneaker/yeezy/1.png";
 import Yeezy2 from "../../componentes-img/sneaker/yeezy/2.png";

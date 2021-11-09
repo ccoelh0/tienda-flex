@@ -3,7 +3,6 @@ import { SeleccionarTalle } from "./SeleccionarTalle";
 import { BotonNegro } from "../Button/BotonNegro";
 
 export const ItemCount = (props) => {
-  //Desestructuracion del props
   const { talle, initial, stock, onAdd } = props;
 
   const [fade, setFade] = useState(false);
@@ -13,7 +12,6 @@ export const ItemCount = (props) => {
     talleElegido: 0,
   });
 
-  //Desestructuracion del state de ItemCount
   const { cantidadSeleccionada, stockDisponible, talleElegido } = objeto;
 
   const reducirCantidadProducto = (cantidad) => {
@@ -43,7 +41,6 @@ export const ItemCount = (props) => {
     }
   };
 
-  //Seleccionar talle
   const talleSelect = (talle) => {
     setObjeto({ ...objeto, talleElegido: talle });
   };
@@ -51,7 +48,6 @@ export const ItemCount = (props) => {
   const [carritoContenedor, setCarritoContenedor] = useState("block");
   const [botonCarrito, setBotonCarrito] = useState("none");
 
-  //Funcion para el carrito y que valida onAdd y hace aparecer ver carrito
   const agregarProductoAlCarrito = (stock, cantidad, talleElegido) => {
     if (talleElegido !== 0) {
       let cantidadDeProductosSeleccionados = cantidad;

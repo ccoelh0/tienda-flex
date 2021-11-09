@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../componentes-css/Footer/footer.css";
 
-//Logos
+//LOGOS
 import Ig from "../../componentes-img/logos/ig.png";
 import Fb from "../../componentes-img/logos/fb.png";
 import Wp from "../../componentes-img/logos/wp.png";

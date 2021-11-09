@@ -19,13 +19,13 @@ export const FormDeCompra = () => {
   const [direction, setDirection] = useState("");
   const [cuota, setCuota] = useState("");
 
-  //States para el componente de tarjeta:
+  //STATES PARA COMPONENTE TARJETAS
   const [cvc, setCVC] = useState("");
   const [expiry, setExpiry] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
-  //id de la compra autogenerado por firebase
+  //ID FIREBASE
   const [idCompra, setIdCompra] = useState("");
   const cuotas = [0, 3, 6, 12];
 
@@ -89,7 +89,7 @@ export const FormDeCompra = () => {
           console.error(error);
         });
 
-      //ACTUALIZACION VARIOS
+      //ACTUALIZACION STOCK
       const db = getFirestore();
       const ItemsCollection = db.collection("items");
       const batch = getFirestore().batch();
@@ -123,7 +123,7 @@ export const FormDeCompra = () => {
               textAlign: "center",
               textTransform: "uppercase",
               fontWeight: 800,
-              margin: "60px 10px",
+              margin: "60px 20px",
               fontSize: "45px",
             }}
           >

@@ -3,8 +3,6 @@ import { useParams } from "react-router";
 import "../../componentes-css/Index/productos.css";
 import { getFirestore } from "../../firebase/firebaseConfig";
 import Spinner from "react-bootstrap/Spinner";
-
-//Componentes
 import { ItemList } from "./ItemList";
 
 const ItemListContainer = () => {

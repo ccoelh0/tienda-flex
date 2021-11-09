@@ -121,6 +121,7 @@ header .menu,
 header .close {
   cursor: pointer;
   display: none;
+  padding: 10px;
 }
 
 .widgetDesktop {
@@ -132,6 +133,10 @@ header .close {
 }
 
 @media (max-width: 650px) {
+  .nav-cart img {
+    width: 30px;
+  }
+
   .widgetDesktop {
     display: none;
   }
