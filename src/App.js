@@ -11,7 +11,7 @@ import CarritoContainer from "./componentes/Cart/CarritoContainer";
 import Footer from "./componentes/Footer/Footer";
 import { FormDeCompra } from "./componentes/Cart/FormDeCompra";
 
-//Context
+//CONTEXT
 import { CartProvider } from "./contexto/CartContext";
 
 function App() {
