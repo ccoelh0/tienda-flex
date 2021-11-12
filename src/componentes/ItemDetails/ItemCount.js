@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SeleccionarTalle } from "./SeleccionarTalle";
 import { BotonNegro } from "../Button/BotonNegro";
+import { Alert } from "react-bootstrap";
 
 export const ItemCount = (props) => {
   const { talle, initial, stock, onAdd } = props;
@@ -48,8 +49,12 @@ export const ItemCount = (props) => {
   const [carritoContenedor, setCarritoContenedor] = useState("block");
   const [botonCarrito, setBotonCarrito] = useState("none");
 
+  //ALERTS
+  const [size, setSize] = useState("none");
+  const [disponibilidad, setDisponibilidad] = useState("none");
+
   const agregarProductoAlCarrito = (stock, cantidad, talleElegido) => {
-    if (talleElegido !== 0) {
+    if (talleElegido !== 0 && talleElegido !== "0") {
       let cantidadDeProductosSeleccionados = cantidad;
       onAdd(cantidadDeProductosSeleccionados, talleElegido);
       setBotonCarrito("block");
@@ -58,14 +63,26 @@ export const ItemCount = (props) => {
         setFade(true);
       }, 50);
     } else if (stock === 0) {
-      alert("No hay stock");
+      setDisponibilidad("block");
+      setTimeout(() => {
+        setDisponibilidad("none");
+      }, 3000);
     } else {
-      alert("Seleccione un talle por favor");
+      setSize("block");
+      setTimeout(() => {
+        setSize("none");
+      }, 3000);
     }
   };
 
   return (
     <>
+      <div style={{ display: size }}>
+        <Alert variant="danger">Choose a size</Alert>
+      </div>
+      <div style={{ display: disponibilidad }}>
+        <Alert variant="danger">Out of stock</Alert>
+      </div>
       <div style={{ display: carritoContenedor }}>
         <div className="contenedor-talle">
           <p>Choose your size:</p>

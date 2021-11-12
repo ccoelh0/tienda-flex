@@ -52,12 +52,12 @@ const TarjetaDeCredito = (props) => {
           <div className="expiry">
             <label htmlFor="expiry">Expiry</label>
             <input
-              type="number"
+              type="text"
               name="expiry"
               placeholder="12/27"
               value={expiry}
               onChange={(evento) => {
-                const expiry = evento.target.value.slice(0, 4);
+                const expiry = evento.target.value.slice(0, 5);
                 setExpiry(expiry);
               }}
               onFocus={handleInputFocus}
