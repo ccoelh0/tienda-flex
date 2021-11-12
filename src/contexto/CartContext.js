@@ -27,12 +27,26 @@ export const CartProvider = ({ children }) => {
 
     //[...carrito] => sirve para que no se pisen los productos
     if (findPorId === -1) {
-      const listaDeItems = [...carrito, { item: itemNuevo, cantidad, talle }];
+      const listaDeItems = [
+        ...carrito,
+        { item: itemNuevo, cantidad, talle: [talle] },
+      ];
       setCarrito(listaDeItems);
     } else {
       const nuevaCantidad = carrito[findPorId].cantidad + cantidad;
-      const talles = [carrito[findPorId].talle, talle];
-      const nuevoTalle = talles.filter((item, i) => talles.indexOf(item) === i);
+
+      //Antes se generaba un loop  de array y se repetian los talles
+      //Solucion: se guarda el valor del talle en un array y se recupera
+      const talleViejo = carrito[findPorId].talle;
+      //Se guarda en otro array el nuevo talle seleccionado
+      const nuevoTalleSeleccionado = [talle];
+      //Con concat se juntan los dos arrays y se devuelve uno solo
+      const talles = talleViejo.concat(nuevoTalleSeleccionado);
+      //Por ultimo, se eliminan del array los valores repetidos pero se mantiene la cantidad seleccionada
+      const tallesSinRepetir = talles.filter(
+        (item, i) => talles.indexOf(item) === i
+      );
+
       const listaViejaDeItems = carrito.filter(
         (listaViejaDeItems) =>
           listaViejaDeItems.item.nombre !== carrito[findPorId].item.nombre
@@ -44,7 +58,7 @@ export const CartProvider = ({ children }) => {
           item: carrito[findPorId].item,
           cantidad:
             nuevaCantidad <= itemNuevo.stock ? nuevaCantidad : itemNuevo.stock,
-          talle: nuevoTalle,
+          talle: tallesSinRepetir,
         },
       ];
       setCarrito(listaDeItems);

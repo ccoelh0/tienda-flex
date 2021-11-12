@@ -36,10 +36,10 @@ export const FormDeCompra = () => {
       email === emailRepeat &&
       direction !== "" &&
       cuota !== "" &&
-      cvc !== "" &&
-      expiry !== "" &&
+      cvc === 3 &&
+      expiry === 4 &&
       name !== "" &&
-      number !== ""
+      number === 16
     ) {
       //toLocaleString nos transcribe el dato de Date
       const fechaDeLaCompra = new Date();
