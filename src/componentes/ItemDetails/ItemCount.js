@@ -37,7 +37,7 @@ export const ItemCount = (props) => {
     } else if (cantidad === 0 && stock !== 0) {
       return (cantidad = 1);
     } else {
-      cantidad = "Sin stock";
+      cantidad = 0;
       return cantidad;
     }
   };

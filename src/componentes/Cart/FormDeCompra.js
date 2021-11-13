@@ -31,15 +31,16 @@ export const FormDeCompra = () => {
 
   const finalizarCompra = (ev) => {
     ev.preventDefault();
+    const expiracion = expiry.length === 4 || expiry.length === 5;
     if (
       nombre !== "" &&
       email === emailRepeat &&
       direction !== "" &&
-      cuota !== "" &&
-      cvc === 3 &&
-      expiry === 4 &&
+      cuota !== "none" &&
+      cvc.length === 3 &&
+      expiracion &&
       name !== "" &&
-      number === 16
+      number.length === 16
     ) {
       //toLocaleString nos transcribe el dato de Date
       const fechaDeLaCompra = new Date();
@@ -205,7 +206,7 @@ export const FormDeCompra = () => {
                     setCuota(cuotaSeleccionada);
                   }}
                 >
-                  <option>Choose</option>
+                  <option value="none">Choose</option>
                   {cuotas.map((c) => (
                     <option key={`key-${c}`} value={c}>
                       {c}

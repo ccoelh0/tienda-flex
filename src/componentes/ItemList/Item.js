@@ -23,7 +23,7 @@ export const Item = ({ item }) => {
         <h3>{nombre}</h3>
         <span>Price: ${precio}</span>
         <span style={{ color: stockDisponible(stock) }}>
-          {stock !== 0 ? "Available stock" : "No stock"}
+          {stock !== 0 ? "Available stock" : "Out of stock"}
         </span>
         <BotonNegro
           texto={`View details`}
